@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/net_farma_backend_igrp/images/IGRP/IGRP2.3/app/net_farma_app/pagedashboard/Pagedashboard.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/net_farma_backend_igrp/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Pagedashboard</page>
+    <app>net_farma_app</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.net_farma_app.pages.dashboard</package_db>
+        <package_html>nosi.webapps.net_farma_app.pages.dashboard</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=92</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>pageDashboard</title>
+        <circlestatbox_produto type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_produto_title name="p_circlestatbox_produto_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Produto</value>
+                </circlestatbox_produto_title>
+                <circlestatbox_produto_lbl name="p_circlestatbox_produto_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_produto_lbl>
+                <circlestatbox_produto_val name="p_circlestatbox_produto_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>61.8</value>
+                </circlestatbox_produto_val>
+                <circlestatbox_produto_desc name="p_circlestatbox_produto_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_produto_desc>
+                <circlestatbox_produto_url name="p_circlestatbox_produto_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_produto_url>
+                <circlestatbox_produto_bg name="p_circlestatbox_produto_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-cyan</value>
+                </circlestatbox_produto_bg>
+            </fields>
+        </circlestatbox_produto>
+        <circlestatbox_fornecedor type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_fornecedor_title name="p_circlestatbox_fornecedor_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Fornecedor</value>
+                </circlestatbox_fornecedor_title>
+                <circlestatbox_fornecedor_lbl name="p_circlestatbox_fornecedor_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_fornecedor_lbl>
+                <circlestatbox_fornecedor_val name="p_circlestatbox_fornecedor_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>61.8</value>
+                </circlestatbox_fornecedor_val>
+                <circlestatbox_fornecedor_desc name="p_circlestatbox_fornecedor_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_fornecedor_desc>
+                <circlestatbox_fornecedor_url name="p_circlestatbox_fornecedor_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_fornecedor_url>
+                <circlestatbox_fornecedor_bg name="p_circlestatbox_fornecedor_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-cyan</value>
+                </circlestatbox_fornecedor_bg>
+            </fields>
+        </circlestatbox_fornecedor>
+        <circlestatbox_funcionario type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_funcionario_title name="p_circlestatbox_funcionario_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Funcionario</value>
+                </circlestatbox_funcionario_title>
+                <circlestatbox_funcionario_lbl name="p_circlestatbox_funcionario_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_funcionario_lbl>
+                <circlestatbox_funcionario_val name="p_circlestatbox_funcionario_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>61.8</value>
+                </circlestatbox_funcionario_val>
+                <circlestatbox_funcionario_desc name="p_circlestatbox_funcionario_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_funcionario_desc>
+                <circlestatbox_funcionario_url name="p_circlestatbox_funcionario_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_funcionario_url>
+                <circlestatbox_funcionario_bg name="p_circlestatbox_funcionario_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-fresh</value>
+                </circlestatbox_funcionario_bg>
+            </fields>
+        </circlestatbox_funcionario>
+        <circlestatbox_venda type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_venda_title name="p_circlestatbox_venda_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Venda</value>
+                </circlestatbox_venda_title>
+                <circlestatbox_venda_lbl name="p_circlestatbox_venda_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_venda_lbl>
+                <circlestatbox_venda_val name="p_circlestatbox_venda_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>47.2</value>
+                </circlestatbox_venda_val>
+                <circlestatbox_venda_desc name="p_circlestatbox_venda_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_venda_desc>
+                <circlestatbox_venda_url name="p_circlestatbox_venda_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_venda_url>
+                <circlestatbox_venda_bg name="p_circlestatbox_venda_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-stylish</value>
+                </circlestatbox_venda_bg>
+            </fields>
+        </circlestatbox_venda>
+        <circlestatbox_estoque type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_estoque_title name="p_circlestatbox_estoque_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Estoque</value>
+                </circlestatbox_estoque_title>
+                <circlestatbox_estoque_lbl name="p_circlestatbox_estoque_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_estoque_lbl>
+                <circlestatbox_estoque_val name="p_circlestatbox_estoque_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>17.0</value>
+                </circlestatbox_estoque_val>
+                <circlestatbox_estoque_desc name="p_circlestatbox_estoque_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_estoque_desc>
+                <circlestatbox_estoque_url name="p_circlestatbox_estoque_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_estoque_url>
+                <circlestatbox_estoque_bg name="p_circlestatbox_estoque_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-orange</value>
+                </circlestatbox_estoque_bg>
+            </fields>
+        </circlestatbox_estoque>
+        <circlestatbox_cliente type="circlestatbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <circlestatbox_cliente_title name="p_circlestatbox_cliente_title" type="text" maxlength="4000">
+                    <label>Circle Box Title</label>
+                    <value>Cliente</value>
+                </circlestatbox_cliente_title>
+                <circlestatbox_cliente_lbl name="p_circlestatbox_cliente_lbl" type="text" maxlength="4000">
+                    <label>Percent Text</label>
+                    <value>percent</value>
+                </circlestatbox_cliente_lbl>
+                <circlestatbox_cliente_val name="p_circlestatbox_cliente_val" type="text" maxlength="4000">
+                    <label>Percent Value</label>
+                    <value>60.6</value>
+                </circlestatbox_cliente_val>
+                <circlestatbox_cliente_desc name="p_circlestatbox_cliente_desc" type="text" maxlength="4000">
+                    <label>Description</label>
+                    <value>Some Text Here</value>
+                </circlestatbox_cliente_desc>
+                <circlestatbox_cliente_url name="p_circlestatbox_cliente_url" type="text" maxlength="4000">
+                    <label>Link</label>
+                    <value>http://www.example.com</value>
+                </circlestatbox_cliente_url>
+                <circlestatbox_cliente_bg name="p_circlestatbox_cliente_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-powder</value>
+                </circlestatbox_cliente_bg>
+            </fields>
+        </circlestatbox_cliente>
+        <chart_1 type="chart" xml-type="chart" title="Chart" gen-type="container" gen-group="">
+            <caption/>
+            <chart_type>column</chart_type>
+            <xaxys>Eixo de X</xaxys>
+            <yaxys>Eixo de Y</yaxys>
+            <url>#</url>
+            <label>
+                <col>Ano</col>
+                <col>X1</col>
+                <col>X2</col>
+                <col>X3</col>
+                <col>X4</col>
+            </label>
+            <value>
+                <row>
+                    <col>2010</col>
+                    <col>373</col>
+                    <col>347</col>
+                    <col>477</col>
+                    <col>8</col>
+                </row>
+                <row>
+                    <col>2009</col>
+                    <col>749</col>
+                    <col>207</col>
+                    <col>522</col>
+                    <col>193</col>
+                </row>
+                <row>
+                    <col>2015</col>
+                    <col>1010</col>
+                    <col>729</col>
+                    <col>120</col>
+                    <col>834</col>
+                </row>
+            </value>
+            <colors>
+                <col>#f9ffb8</col>
+                <col>#8f3543</col>
+                <col>#112828</col>
+                <col>#e9df20</col>
+            </colors>
+        </chart_1>
+        <chart_2 type="chart" xml-type="chart" title="Chart" gen-type="container" gen-group="">
+            <caption/>
+            <chart_type>pie</chart_type>
+            <xaxys>Eixo de X</xaxys>
+            <yaxys>Eixo de Y</yaxys>
+            <url>#</url>
+            <label>
+                <col>Ano</col>
+                <col>X1</col>
+                <col>X2</col>
+                <col>X3</col>
+                <col>X4</col>
+            </label>
+            <value>
+                <row>
+                    <col>2010</col>
+                    <col>553</col>
+                    <col>771</col>
+                    <col>607</col>
+                    <col>54</col>
+                </row>
+                <row>
+                    <col>2009</col>
+                    <col>676</col>
+                    <col>974</col>
+                    <col>851</col>
+                    <col>79</col>
+                </row>
+                <row>
+                    <col>2015</col>
+                    <col>1010</col>
+                    <col>508</col>
+                    <col>759</col>
+                    <col>531</col>
+                </row>
+            </value>
+            <colors>
+                <col>#5bae96</col>
+                <col>#c4e5d7</col>
+                <col>#133b85</col>
+                <col>#cd6d8c</col>
+            </colors>
+        </chart_2>
+        <chart_3 type="chart" xml-type="chart" title="Chart" gen-type="container" gen-group="">
+            <caption/>
+            <chart_type>line</chart_type>
+            <xaxys>Eixo de X</xaxys>
+            <yaxys>Eixo de Y</yaxys>
+            <url>#</url>
+            <label>
+                <col>Ano</col>
+                <col>X1</col>
+                <col>X2</col>
+                <col>X3</col>
+                <col>X4</col>
+            </label>
+            <value>
+                <row>
+                    <col>2010</col>
+                    <col>588</col>
+                    <col>323</col>
+                    <col>94</col>
+                    <col>121</col>
+                </row>
+                <row>
+                    <col>2009</col>
+                    <col>514</col>
+                    <col>665</col>
+                    <col>439</col>
+                    <col>452</col>
+                </row>
+                <row>
+                    <col>2015</col>
+                    <col>1010</col>
+                    <col>587</col>
+                    <col>637</col>
+                    <col>489</col>
+                </row>
+            </value>
+            <colors>
+                <col>#236e49</col>
+                <col>#f35867</col>
+                <col>#e47a41</col>
+                <col>#3d4d2c</col>
+            </colors>
+        </chart_3>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Dashboard Farmacia</span></strong></span></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

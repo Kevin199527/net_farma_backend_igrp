@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/net_farma_backend_igrp/images/IGRP/IGRP2.3/app/net_farma_app/registrar_medicamento/Registrar_medicamento.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/net_farma_backend_igrp/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Registrar_medicamento</page>
+    <app>net_farma_app</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.net_farma_app.pages</package_db>
+        <package_html>Registrar_medicamento</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=86</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Registrar Medicamento</title>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" copy="true" copy-tag="toolsbar_1" copy-package-db="nosi.webapps.net_farma_app.pages" copy-package-html="Pagemenu" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="registrar_produtos" refresh_components="">
+                <title>Registrar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Registrar_medicamento</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-save</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/registrar_medicamento/Registrar_medicamento.xml</preview>
+            </item>
+            <item type="specific" code="" rel="listar_produtos" refresh_components="">
+                <title>Listar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Paginalistarproduto</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-list</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xml</preview>
+            </item>
+            <item type="specific" code="" rel="dashboard" refresh_components="">
+                <title>Dashboard</title>
+                <app>net_farma_app</app>
+                <page>Pagina_dashboard</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-dashboard</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
+            </item>
+        </toolsbar_1>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><strong><span style='font-family:Times New Roman,Times,serif;'><span style='font-size:36px;'>Registrar Produto</span></span></strong></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+        <box_1 type="box" xml-type="form" gen-type="container" gen-group="">
+            <fields/>
+        </box_1>
+        <separatorlist_registrar type="separatorlist" xml-type="separatorlist" gen-clean="true" gen-type="container" gen-group="true">
+            <fields>
+                <nome_medicamento name="p_nome_medicamento" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                    <label>Nome Medicamento</label>
+                    <value>Officia aperiam sed ut ipsum</value>
+                </nome_medicamento>
+                <descricao_do_produto name="p_descricao_do_produto" type="textarea" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                    <label>Descrição do Produto</label>
+                    <value>Rem totam ut magna doloremque aliqua perspiciatis stract ut consectetur aliqua mollit natus iste laudantium</value>
+                </descricao_do_produto>
+                <preco_do_produto name="p_preco_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                    <label>Preço do Produto</label>
+                    <value>Dolor amet consectetur adipiscing laudantium</value>
+                </preco_do_produto>
+                <image name="p_image" type="file" accept="image/*" targetrend="" multiple="false" rendvalue="false" maxlength="250" required="false" disabled="false" right="false" class="primary" desc="true">
+                    <label>Imagem</label>
+                    <value/>
+                </image>
+                <receita name="p_receita" type="select" multiple="false" tags="false" load_service_data="false" domain="Receita « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" desc="true">
+                    <label>Receita</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Sim</text>
+                            <value>Sim</value>
+                        </option>
+                        <option>
+                            <text>Não</text>
+                            <value>Não</value>
+                        </option>
+                    </list>
+                </receita>
+                <estoque name="p_estoque" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                    <label>Estoque</label>
+                    <value>Mollit amet totam natus lorem</value>
+                </estoque>
+                <tipo_de_produto name="p_tipo_de_produto" type="select" multiple="false" tags="false" load_service_data="false" domain="Tipo de Produto « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" desc="true">
+                    <label>Tipo de Produto</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Medicamento</text>
+                            <value>Medicamento</value>
+                        </option>
+                        <option>
+                            <text>Produto de Bebe</text>
+                            <value>Produto de Bebe</value>
+                        </option>
+                        <option>
+                            <text>Produto para Mãe</text>
+                            <value>Produto para Mãe</value>
+                        </option>
+                        <option>
+                            <text>Suplimentos</text>
+                            <value>Suplimentos</value>
+                        </option>
+                        <option>
+                            <text>Outros</text>
+                            <value>Outros</value>
+                        </option>
+                    </list>
+                </tipo_de_produto>
+            </fields>
+            <table>
+                <value>
+                    <row>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Sed omnis labore voluptatem lorem</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Sed omnis labore voluptatem lorem</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Perspiciatis stract lorem anim sit perspiciatis doloremque aperiam voluptatem natus magna rem lorem aperiam natus</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Perspiciatis stract lorem anim sit perspiciatis doloremque aperiam voluptatem natus magna rem lorem aperiam natus</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Elit sit stract stract aliqua</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Elit sit stract stract aliqua</preco_do_produto_check>
+                        <image name="p_image" desc="true"/>
+                        <image_check name="p_image_check"/>
+                        <receita name="p_receita" desc="true">2</receita>
+                        <receita_check name="p_receita_check">2</receita_check>
+                        <estoque name="p_estoque" desc="true">Adipiscing voluptatem officia ut lorem</estoque>
+                        <estoque_check name="p_estoque_check">Adipiscing voluptatem officia ut lorem</estoque_check>
+                        <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
+                        <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
+                    </row>
+                    <row>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Natus consectetur mollit officia stract</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Natus consectetur mollit officia stract</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Iste unde stract iste aliqua voluptatem sed sit aliqua labore doloremque sit anim deserunt omnis</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Iste unde stract iste aliqua voluptatem sed sit aliqua labore doloremque sit anim deserunt omnis</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Officia dolor lorem unde aperiam</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Officia dolor lorem unde aperiam</preco_do_produto_check>
+                        <image name="p_image" desc="true"/>
+                        <image_check name="p_image_check"/>
+                        <receita name="p_receita" desc="true">2</receita>
+                        <receita_check name="p_receita_check">2</receita_check>
+                        <estoque name="p_estoque" desc="true">Magna aperiam ipsum dolor natus</estoque>
+                        <estoque_check name="p_estoque_check">Magna aperiam ipsum dolor natus</estoque_check>
+                        <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
+                        <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
+                    </row>
+                    <row>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Voluptatem aperiam unde labore ut</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Voluptatem aperiam unde labore ut</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Sit sed mollit natus amet iste laudantium omnis accusantium magna adipiscing anim natus dolor aliqua</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Sit sed mollit natus amet iste laudantium omnis accusantium magna adipiscing anim natus dolor aliqua</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Dolor mollit iste mollit anim</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Dolor mollit iste mollit anim</preco_do_produto_check>
+                        <image name="p_image" desc="true"/>
+                        <image_check name="p_image_check"/>
+                        <receita name="p_receita" desc="true">2</receita>
+                        <receita_check name="p_receita_check">2</receita_check>
+                        <estoque name="p_estoque" desc="true">Perspiciatis anim voluptatem ipsum adipiscing</estoque>
+                        <estoque_check name="p_estoque_check">Perspiciatis anim voluptatem ipsum adipiscing</estoque_check>
+                        <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
+                        <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
+                    </row>
+                    <row>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Rem deserunt iste mollit stract</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Rem deserunt iste mollit stract</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Magna mollit sit rem lorem stract perspiciatis rem sit magna ut aliqua sit adipiscing sed</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Magna mollit sit rem lorem stract perspiciatis rem sit magna ut aliqua sit adipiscing sed</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Sed totam ipsum sed deserunt</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Sed totam ipsum sed deserunt</preco_do_produto_check>
+                        <image name="p_image" desc="true"/>
+                        <image_check name="p_image_check"/>
+                        <receita name="p_receita" desc="true">2</receita>
+                        <receita_check name="p_receita_check">2</receita_check>
+                        <estoque name="p_estoque" desc="true">Consectetur natus officia adipiscing accusantium</estoque>
+                        <estoque_check name="p_estoque_check">Consectetur natus officia adipiscing accusantium</estoque_check>
+                        <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
+                        <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
+                    </row>
+                    <row>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Mollit totam accusantium ut doloremque</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Mollit totam accusantium ut doloremque</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Deserunt accusantium dolor officia sit deserunt stract laudantium consectetur sed sit lorem voluptatem amet accusantium</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Deserunt accusantium dolor officia sit deserunt stract laudantium consectetur sed sit lorem voluptatem amet accusantium</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Laudantium elit adipiscing deserunt sit</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Laudantium elit adipiscing deserunt sit</preco_do_produto_check>
+                        <image name="p_image" desc="true"/>
+                        <image_check name="p_image_check"/>
+                        <receita name="p_receita" desc="true">2</receita>
+                        <receita_check name="p_receita_check">2</receita_check>
+                        <estoque name="p_estoque" desc="true">Rem voluptatem unde voluptatem lorem</estoque>
+                        <estoque_check name="p_estoque_check">Rem voluptatem unde voluptatem lorem</estoque_check>
+                        <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
+                        <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
+                    </row>
+                </value>
+            </table>
+        </separatorlist_registrar>
+        <toolsbar_2 type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="gravar" refresh_components="">
+                <title>Gravar</title>
+                <app>net_farma_app</app>
+                <page>Registrar_medicamento</page>
+                <link>index</link>
+                <target>submit</target>
+                <img>success|fa-save</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/registrar_medicamento/Registrar_medicamento.xml</preview>
+            </item>
+        </toolsbar_2>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

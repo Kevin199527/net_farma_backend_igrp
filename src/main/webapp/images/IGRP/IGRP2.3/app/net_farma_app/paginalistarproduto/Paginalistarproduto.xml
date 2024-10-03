@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/net_farma_backend_igrp/images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/net_farma_backend_igrp/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Paginalistarproduto</page>
+    <app>net_farma_app</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.net_farma_app.pages</package_db>
+        <package_html>Paginalistarproduto</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=96</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>PaginaListarProduto</title>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" copy="true" copy-tag="toolsbar_1" copy-package-db="nosi.webapps.net_farma_app.pages" copy-package-html="Pagemenu" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="registrar_produtos" refresh_components="">
+                <title>Registrar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Registrar_medicamento</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-save</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/registrar_medicamento/Registrar_medicamento.xml</preview>
+            </item>
+            <item type="specific" code="" rel="listar_produtos" refresh_components="">
+                <title>Listar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Paginalistarproduto</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-list</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xml</preview>
+            </item>
+            <item type="specific" code="" rel="dashboard" refresh_components="">
+                <title>Dashboard</title>
+                <app>net_farma_app</app>
+                <page>Pagina_dashboard</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-dashboard</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
+            </item>
+        </toolsbar_1>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Lista de Produto</span></strong></span></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+        <table_1 type="table" xml-type="table" gen-type="container" gen-group="true">
+            <fields>
+                <imagem name="p_imagem" type="img" persist="true" img="../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg" width="" height="" croppie="false" rounded="false" autoupload="false" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Imagem</label>
+                </imagem>
+                <nome_do_produto name="p_nome_do_produto" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Nome do Produto</label>
+                </nome_do_produto>
+                <descricao name="p_descricao" type="textarea" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Descrição</label>
+                </descricao>
+                <preco name="p_preco" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Preço</label>
+                </preco>
+                <tipo_de_produto name="p_tipo_de_produto" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Tipo de Produto</label>
+                </tipo_de_produto>
+                <receita name="p_receita" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Receita</label>
+                </receita>
+            </fields>
+            <table>
+                <value>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
+                        <nome_do_produto name="p_nome_do_produto">Ut totam labore sed lorem</nome_do_produto>
+                        <descricao name="p_descricao">Ut totam ipsum aliqua sed laud</descricao>
+                        <preco name="p_preco">Stract omnis totam perspiciati</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Sit magna stract amet officia</tipo_de_produto>
+                        <receita name="p_receita">Aperiam magna sed sit rem</receita>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
+                        <nome_do_produto name="p_nome_do_produto">Lorem labore rem mollit labore</nome_do_produto>
+                        <descricao name="p_descricao">Ipsum labore mollit magna aper</descricao>
+                        <preco name="p_preco">Consectetur deserunt accusanti</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Ipsum lorem elit amet natus</tipo_de_produto>
+                        <receita name="p_receita">Amet anim aliqua consectetur u</receita>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
+                        <nome_do_produto name="p_nome_do_produto">Magna dolor natus unde sit</nome_do_produto>
+                        <descricao name="p_descricao">Elit laudantium sit amet ipsum</descricao>
+                        <preco name="p_preco">Aperiam deserunt aperiam aliqu</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Rem iste doloremque deserunt u</tipo_de_produto>
+                        <receita name="p_receita">Sed mollit officia anim natus</receita>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
+                        <nome_do_produto name="p_nome_do_produto">Sed elit amet anim aliqua</nome_do_produto>
+                        <descricao name="p_descricao">Adipiscing elit lorem accusant</descricao>
+                        <preco name="p_preco">Sit lorem iste aperiam elit</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Consectetur totam magna accusa</tipo_de_produto>
+                        <receita name="p_receita">Deserunt aliqua anim perspicia</receita>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
+                        <nome_do_produto name="p_nome_do_produto">Consectetur ut rem omnis lauda</nome_do_produto>
+                        <descricao name="p_descricao">Unde adipiscing aperiam sed la</descricao>
+                        <preco name="p_preco">Anim perspiciatis sit lorem al</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Omnis accusantium officia iste</tipo_de_produto>
+                        <receita name="p_receita">Voluptatem lorem mollit totam</receita>
+                    </row>
+                </value>
+                <context-menu>
+                    <item id="button_dd9c_8e6f" type="specific" code="" class="info" rel="visualizar" refresh_components="">
+                        <title>Visualizar</title>
+                        <app>net_farma_app</app>
+                        <page>Pagina_de_detalhe_de_produto</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml?</parameter>
+                        <target>modal</target>
+                        <img>info|fa-eye</img>
+                        <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml</preview>
+                    </item>
+                    <item id="button_e675_77bd" type="specific" code="" class="warning" rel="editar" refresh_components="">
+                        <title>Editar</title>
+                        <app>net_farma_app</app>
+                        <page>Pagina_de_detalhe_de_produto</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml?</parameter>
+                        <target>modal</target>
+                        <img>warning|fa-pencil</img>
+                        <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml</preview>
+                    </item>
+                    <item id="button_bf8c_2eee" type="specific" code="" class="danger" rel="eliminar" refresh_components="" labelConfirm="Deseja realmente realizar esta operação?">
+                        <title>Eliminar</title>
+                        <app>net_farma_app</app>
+                        <page>Paginalistarproduto</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xml?</parameter>
+                        <target>confirm</target>
+                        <img>danger|fa-trash-o</img>
+                        <preview>../images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xml</preview>
+                    </item>
+                </context-menu>
+            </table>
+        </table_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

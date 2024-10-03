@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/net_farma_backend_igrp/images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/net_farma_backend_igrp/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Pagina_de_detalhe_de_produto</page>
+    <app>net_farma_app</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.net_farma_app.pages</package_db>
+        <package_html>Pagina_de_detalhe_de_produto</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=99</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Pagina de Detalhe de Produto</title>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><strong><span style='font-family:Times New Roman,Times,serif;'><span style='font-size:36px;'>Detalhe do Produto</span></span></strong></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+        <form_1 type="form" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <form_1_img_1 name="p_form_1_img_1" type="img" persist="true" img="../images/IGRP/IGRP2.3/assets/img/loginLogo.svg" width="" height="" croppie="false" rounded="false" autoupload="false" maxlength="250" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Img</label>
+                    <value>../images/IGRP/IGRP2.3/assets/img/loginLogo.svg</value>
+                </form_1_img_1>
+                <nome_do_produto name="p_nome_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Nome do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Nome do Produto</label>
+                    <value>Lorem sit laudantium iste laudantium</value>
+                </nome_do_produto>
+                <preco_do_produto name="p_preco_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Preço do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Preço do Produto</label>
+                    <value>Voluptatem mollit aliqua magna voluptatem</value>
+                </preco_do_produto>
+                <tipo_de_produto name="p_tipo_de_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Tipo de Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Tipo de Produto</label>
+                    <value>Deserunt officia sit ut labore</value>
+                </tipo_de_produto>
+                <contem_receita name="p_contem_receita" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Contem Receita" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Contem Receita</label>
+                    <value>Consectetur voluptatem accusantium sit sit</value>
+                </contem_receita>
+                <descricao name="p_descricao" type="textarea" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Descrição</label>
+                    <value>Magna consectetur ipsum totam voluptatem mollit natus labore accusantium ipsum consectetur unde magna adipiscing totam</value>
+                </descricao>
+            </fields>
+            <tools-bar>
+                <item id="button_e86c_34d9" type="form" code="" class="success" rel="concluir" refresh_components="">
+                    <title>Concluir</title>
+                    <app>net_farma_app</app>
+                    <page>Pagina_de_detalhe_de_produto</page>
+                    <link>index</link>
+                    <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml?</parameter>
+                    <target>submit</target>
+                    <img>success|fa-check</img>
+                    <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml</preview>
+                </item>
+                <item id="button_093c_b006" type="form" code="" class="danger" rel="fechar_1" refresh_components="">
+                    <title>Fechar</title>
+                    <app>net_farma_app</app>
+                    <page>Pagina_de_detalhe_de_produto</page>
+                    <link>index</link>
+                    <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml?</parameter>
+                    <target>_close</target>
+                    <img>danger|fa-close</img>
+                    <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml</preview>
+                </item>
+            </tools-bar>
+        </form_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

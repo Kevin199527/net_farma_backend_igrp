@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/net_farma_backend_igrp/images/IGRP/IGRP2.3/app/net_farma_app/pagemenu/Pagemenu.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/net_farma_backend_igrp/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Pagemenu</page>
+    <app>net_farma_app</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.net_farma_app.pages</package_db>
+        <package_html>Pagemenu</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=97</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>pageMenu</title>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="registrar_produtos" refresh_components="">
+                <title>Registrar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Registrar_medicamento</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-save</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/registrar_medicamento/Registrar_medicamento.xml</preview>
+            </item>
+            <item type="specific" code="" rel="listar_produtos" refresh_components="">
+                <title>Listar Produtos</title>
+                <app>net_farma_app</app>
+                <page>Paginalistarproduto</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-list</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/paginalistarproduto/Paginalistarproduto.xml</preview>
+            </item>
+            <item type="specific" code="" rel="dashboard" refresh_components="">
+                <title>Dashboard</title>
+                <app>net_farma_app</app>
+                <page>Pagina_dashboard</page>
+                <link>index</link>
+                <target>_self</target>
+                <img>grey|fa-dashboard</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
+            </item>
+        </toolsbar_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>
