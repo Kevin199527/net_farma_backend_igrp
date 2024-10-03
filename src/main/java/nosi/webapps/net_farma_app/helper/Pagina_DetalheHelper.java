@@ -23,7 +23,9 @@ public class Pagina_DetalheHelper extends IgrpPageHelper<Pagina_de_detalhe_de_pr
     }
 
     public void receberDadosPageDetalhe() {
-       
+        /*Obtém uma instância de TblMedicamentos com base no ID fornecido no model
+		 O método Core.toInt é usado para converter o valor de model.getId_list(), que é uma String, para um Integer
+		 Isso é necessário porque o campo ID em TblMedicamentos é do tipo Integer*/
         TblMedicamentos t = new TblMedicamentos().findOne(Core.toInt(model.getId_list()));
 
 
