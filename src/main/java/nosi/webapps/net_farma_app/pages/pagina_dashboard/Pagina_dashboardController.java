@@ -76,7 +76,18 @@ public class Pagina_dashboardController extends Controller {
 		  ----#gen-example */
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/
-		
+		view.chart_1.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
+				+" UNION SELECT 'X3' as EixoX, 'Y3' as EixoY, 40 as EixoZ"));
+		view.chart_2.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
+				+" UNION SELECT 'X3' as EixoX, 'Y3' as EixoY, 40 as EixoZ"));
+		view.chart_3.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
+				+" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
+				+" UNION SELECT 'X3' as EixoX, 'Y3' as EixoY, 40 as EixoZ"));
 		
 		/*----#end-code----*/
 		view.setModel(model);

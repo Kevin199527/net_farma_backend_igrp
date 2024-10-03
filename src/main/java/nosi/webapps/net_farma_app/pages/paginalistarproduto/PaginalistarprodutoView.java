@@ -15,8 +15,9 @@ public class PaginalistarprodutoView extends View {
 	public Field preco;
 	public Field tipo_de_produto;
 	public Field receita;
+	public Field id_list;
 	public IGRPSectionHeader sectionheader_1;
-	public IGRPTable table_1;
+	public IGRPTable tabela_de_produto;
 
 	public IGRPToolsBar toolsbar_1;
 	public IGRPButton btn_registrar_produtos;
@@ -32,7 +33,7 @@ public class PaginalistarprodutoView extends View {
 			
 		sectionheader_1 = new IGRPSectionHeader("sectionheader_1","");
 
-		table_1 = new IGRPTable("table_1","");
+		tabela_de_produto = new IGRPTable("tabela_de_produto","");
 
 		sectionheader_1_text = new TextField(model,"sectionheader_1_text");
 		sectionheader_1_text.setLabel(gt(""));
@@ -64,6 +65,10 @@ public class PaginalistarprodutoView extends View {
 		receita.setLabel(gt("Receita"));
 		receita.propertie().add("name","p_receita").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
 		
+		id_list = new HiddenField(model,"id_list");
+		id_list.setLabel(gt(""));
+		id_list.propertie().add("name","p_id_list").add("type","hidden").add("maxlength","30").add("showLabel","true").add("group_in","").add("java-type","").add("tag","id_list");
+		
 
 		toolsbar_1 = new IGRPToolsBar("toolsbar_1");
 
@@ -94,21 +99,22 @@ public class PaginalistarprodutoView extends View {
 
 		sectionheader_1.addField(sectionheader_1_text);
 
-		table_1.addField(imagem);
-		table_1.addField(nome_do_produto);
-		table_1.addField(descricao);
-		table_1.addField(preco);
-		table_1.addField(tipo_de_produto);
-		table_1.addField(receita);
+		tabela_de_produto.addField(imagem);
+		tabela_de_produto.addField(nome_do_produto);
+		tabela_de_produto.addField(descricao);
+		tabela_de_produto.addField(preco);
+		tabela_de_produto.addField(tipo_de_produto);
+		tabela_de_produto.addField(receita);
+		tabela_de_produto.addField(id_list);
 
 		toolsbar_1.addButton(btn_registrar_produtos);
 		toolsbar_1.addButton(btn_listar_produtos);
 		toolsbar_1.addButton(btn_dashboard);
-		table_1.addButton(btn_visualizar);
-		table_1.addButton(btn_editar);
-		table_1.addButton(btn_eliminar);
+		tabela_de_produto.addButton(btn_visualizar);
+		tabela_de_produto.addButton(btn_editar);
+		tabela_de_produto.addButton(btn_eliminar);
 		this.addToPage(sectionheader_1);
-		this.addToPage(table_1);
+		this.addToPage(tabela_de_produto);
 		this.addToPage(toolsbar_1);
 	}
 		
@@ -119,8 +125,9 @@ public class PaginalistarprodutoView extends View {
 		descricao.setValue(model);
 		preco.setValue(model);
 		tipo_de_produto.setValue(model);
-		receita.setValue(model);	
+		receita.setValue(model);
+		id_list.setValue(model);	
 
-		table_1.loadModel(((Paginalistarproduto) model).getTable_1());
+		tabela_de_produto.loadModel(((Paginalistarproduto) model).getTabela_de_produto());
 		}
 }

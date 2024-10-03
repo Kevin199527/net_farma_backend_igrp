@@ -44,15 +44,15 @@ public class Registrar_medicamentoView extends View {
 		
 		nome_medicamento = new TextField(model,"nome_medicamento");
 		nome_medicamento.setLabel(gt("Nome Medicamento"));
-		nome_medicamento.propertie().add("name","p_nome_medicamento").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
+		nome_medicamento.propertie().add("name","p_nome_medicamento").add("type","text").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
 		descricao_do_produto = new TextAreaField(model,"descricao_do_produto");
 		descricao_do_produto.setLabel(gt("Descrição do Produto"));
-		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","textarea").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
+		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","textarea").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
 		preco_do_produto = new TextField(model,"preco_do_produto");
 		preco_do_produto.setLabel(gt("Preço do Produto"));
-		preco_do_produto.propertie().add("name","p_preco_do_produto").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
+		preco_do_produto.propertie().add("name","p_preco_do_produto").add("type","text").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
 		image = new FileField(model,"image");
 		image.setLabel(gt("Imagem"));
@@ -60,15 +60,15 @@ public class Registrar_medicamentoView extends View {
 		
 		receita = new ListField(model,"receita");
 		receita.setLabel(gt("Receita"));
-		receita.propertie().add("name","p_receita").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Receita « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("desc","true");
+		receita.propertie().add("name","p_receita").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Receita « net_farma_app").add("maxlength","250").add("required","true").add("disabled","false").add("java-type","").add("desc","true");
 		
 		estoque = new TextField(model,"estoque");
 		estoque.setLabel(gt("Estoque"));
-		estoque.propertie().add("name","p_estoque").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
+		estoque.propertie().add("name","p_estoque").add("type","text").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
 		tipo_de_produto = new ListField(model,"tipo_de_produto");
 		tipo_de_produto.setLabel(gt("Tipo de Produto"));
-		tipo_de_produto.propertie().add("name","p_tipo_de_produto").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Tipo de Produto « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("desc","true");
+		tipo_de_produto.propertie().add("name","p_tipo_de_produto").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Tipo de Produto « net_farma_app").add("maxlength","250").add("required","true").add("disabled","false").add("java-type","").add("desc","true");
 		
 
 		toolsbar_1 = new IGRPToolsBar("toolsbar_1");

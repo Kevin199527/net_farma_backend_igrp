@@ -15,6 +15,7 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 	public Field tipo_de_produto;
 	public Field contem_receita;
 	public Field descricao;
+	public Field id_list;
 	public IGRPSectionHeader sectionheader_1;
 	public IGRPForm form_1;
 
@@ -59,12 +60,16 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		descricao.setLabel(gt("Descrição"));
 		descricao.propertie().add("name","p_descricao").add("type","textarea").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","true").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false");
 		
+		id_list = new HiddenField(model,"id_list");
+		id_list.setLabel(gt(""));
+		id_list.propertie().add("name","p_id_list").add("type","hidden").add("maxlength","250").add("java-type","").add("tooltip","false").add("disable_copy_paste","false").add("tag","id_list");
+		
 
 
 		btn_concluir = new IGRPButton("Concluir","net_farma_app","Pagina_de_detalhe_de_produto","concluir","submit","success|fa-check","","");
 		btn_concluir.propertie.add("id","button_e86c_34d9").add("type","form").add("class","success").add("rel","concluir").add("refresh_components","");
 
-		btn_fechar_1 = new IGRPButton("Fechar","net_farma_app","Pagina_de_detalhe_de_produto","fechar_1","_close","danger|fa-close","","");
+		btn_fechar_1 = new IGRPButton("Fechar","net_farma_app","Pagina_de_detalhe_de_produto","fechar_1","closerefresh","danger|fa-close","","");
 		btn_fechar_1.propertie.add("id","button_093c_b006").add("type","form").add("class","danger").add("rel","fechar_1").add("refresh_components","");
 
 		
@@ -81,6 +86,7 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		form_1.addField(tipo_de_produto);
 		form_1.addField(contem_receita);
 		form_1.addField(descricao);
+		form_1.addField(id_list);
 
 		form_1.addButton(btn_concluir);
 		form_1.addButton(btn_fechar_1);
@@ -95,7 +101,8 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		preco_do_produto.setValue(model);
 		tipo_de_produto.setValue(model);
 		contem_receita.setValue(model);
-		descricao.setValue(model);	
+		descricao.setValue(model);
+		id_list.setValue(model);	
 
 		}
 }

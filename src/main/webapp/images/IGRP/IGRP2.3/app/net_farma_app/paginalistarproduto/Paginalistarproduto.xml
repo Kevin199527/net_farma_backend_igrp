@@ -76,7 +76,7 @@
                 </sectionheader_1_text>
             </fields>
         </sectionheader_1>
-        <table_1 type="table" xml-type="table" gen-type="container" gen-group="true">
+        <tabela_de_produto type="table" xml-type="table" gen-type="container" gen-group="true">
             <fields>
                 <imagem name="p_imagem" type="img" persist="true" img="../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg" width="" height="" croppie="false" rounded="false" autoupload="false" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
                     <label>Imagem</label>
@@ -96,6 +96,7 @@
                 <receita name="p_receita" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
                     <label>Receita</label>
                 </receita>
+                <id_list name="p_id_list" type="hidden" maxlength="30" showLabel="true" iskey="true" group_in="" java-type="" tag="id_list"/>
             </fields>
             <table>
                 <value>
@@ -105,11 +106,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Ut totam labore sed lorem</nome_do_produto>
-                        <descricao name="p_descricao">Ut totam ipsum aliqua sed laud</descricao>
-                        <preco name="p_preco">Stract omnis totam perspiciati</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Sit magna stract amet officia</tipo_de_produto>
-                        <receita name="p_receita">Aperiam magna sed sit rem</receita>
+                        <nome_do_produto name="p_nome_do_produto">Accusantium unde rem deserunt</nome_do_produto>
+                        <descricao name="p_descricao">Iste perspiciatis lorem labore</descricao>
+                        <preco name="p_preco">Laudantium sit magna amet aper</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Anim unde dolor perspiciatis n</tipo_de_produto>
+                        <receita name="p_receita">Voluptatem aperiam totam sit v</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-a2da_a2cd</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -117,11 +119,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Lorem labore rem mollit labore</nome_do_produto>
-                        <descricao name="p_descricao">Ipsum labore mollit magna aper</descricao>
-                        <preco name="p_preco">Consectetur deserunt accusanti</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Ipsum lorem elit amet natus</tipo_de_produto>
-                        <receita name="p_receita">Amet anim aliqua consectetur u</receita>
+                        <nome_do_produto name="p_nome_do_produto">Natus stract adipiscing aperia</nome_do_produto>
+                        <descricao name="p_descricao">Ipsum adipiscing aliqua laudan</descricao>
+                        <preco name="p_preco">Sit sit unde sit stract</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Aliqua sed omnis ipsum sit</tipo_de_produto>
+                        <receita name="p_receita">Amet sit ut ipsum unde</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-b4b9_5493</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -129,11 +132,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Magna dolor natus unde sit</nome_do_produto>
-                        <descricao name="p_descricao">Elit laudantium sit amet ipsum</descricao>
-                        <preco name="p_preco">Aperiam deserunt aperiam aliqu</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Rem iste doloremque deserunt u</tipo_de_produto>
-                        <receita name="p_receita">Sed mollit officia anim natus</receita>
+                        <nome_do_produto name="p_nome_do_produto">Unde lorem natus deserunt magn</nome_do_produto>
+                        <descricao name="p_descricao">Rem elit unde laudantium anim</descricao>
+                        <preco name="p_preco">Omnis perspiciatis magna lauda</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Lorem doloremque anim magna mo</tipo_de_produto>
+                        <receita name="p_receita">Iste lorem aliqua omnis laudan</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-0253_334e</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -141,11 +145,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Sed elit amet anim aliqua</nome_do_produto>
-                        <descricao name="p_descricao">Adipiscing elit lorem accusant</descricao>
-                        <preco name="p_preco">Sit lorem iste aperiam elit</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Consectetur totam magna accusa</tipo_de_produto>
-                        <receita name="p_receita">Deserunt aliqua anim perspicia</receita>
+                        <nome_do_produto name="p_nome_do_produto">Elit aperiam amet anim elit</nome_do_produto>
+                        <descricao name="p_descricao">Doloremque iste ut sit sit ali</descricao>
+                        <preco name="p_preco">Iste rem anim aliqua adipiscin</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Natus magna elit deserunt sit</tipo_de_produto>
+                        <receita name="p_receita">Sit rem stract lorem unde</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-d515_aab6</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -153,11 +158,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Consectetur ut rem omnis lauda</nome_do_produto>
-                        <descricao name="p_descricao">Unde adipiscing aperiam sed la</descricao>
-                        <preco name="p_preco">Anim perspiciatis sit lorem al</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Omnis accusantium officia iste</tipo_de_produto>
-                        <receita name="p_receita">Voluptatem lorem mollit totam</receita>
+                        <nome_do_produto name="p_nome_do_produto">Mollit ipsum sit stract totam</nome_do_produto>
+                        <descricao name="p_descricao">Natus stract amet elit labore</descricao>
+                        <preco name="p_preco">Natus amet consectetur deserun</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Anim voluptatem ipsum labore a</tipo_de_produto>
+                        <receita name="p_receita">Lorem dolor deserunt totam con</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-4877_638a</id_list>
                     </row>
                 </value>
                 <context-menu>
@@ -193,7 +199,7 @@
                     </item>
                 </context-menu>
             </table>
-        </table_1>
+        </tabela_de_produto>
     </content>
     <blockly>
         <imports></imports>

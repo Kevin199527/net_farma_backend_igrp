@@ -27,6 +27,9 @@ public class Pagina_de_detalhe_de_produto extends Model{
 
 	@RParam(rParamName = "p_descricao")
 	private String descricao;
+
+	@RParam(rParamName = "p_id_list")
+	private String id_list;
 	
 	public void setSectionheader_1_text(String sectionheader_1_text){
 		this.sectionheader_1_text = sectionheader_1_text;
@@ -81,6 +84,13 @@ public class Pagina_de_detalhe_de_produto extends Model{
 	}
 	public String getDescricao(){
 		return this.descricao;
+	}
+	
+	public void setId_list(String id_list){
+		this.id_list = id_list;
+	}
+	public String getId_list(){
+		return this.id_list;
 	}
 
 

@@ -8,6 +8,8 @@ import nosi.core.webapp.SeparatorList;
 import java.util.ArrayList;
 import java.util.List;
 import jakarta.validation.Valid;
+import nosi.core.validator.constraints.*;
+
 public class Registrar_medicamento extends Model{		
 
 	@RParam(rParamName = "p_sectionheader_1_text")
@@ -60,12 +62,18 @@ public class Registrar_medicamento extends Model{
 
 	public static class Separatorlist_registrar{
 		private Pair separatorlist_registrar_id;
+		@PairNotNull()
 private Pair nome_medicamento;
+		@PairNotNull()
 private Pair descricao_do_produto;
+		@PairNotNull()
 private Pair preco_do_produto;
 private Pair image;
+		@PairNotNull()
 private Pair receita;
+		@PairNotNull()
 private Pair estoque;
+		@PairNotNull()
 private Pair tipo_de_produto;
 		public void setSeparatorlist_registrar_id(Pair separatorlist_registrar_id){
 			this.separatorlist_registrar_id = separatorlist_registrar_id;

@@ -12,12 +12,12 @@ public class Paginalistarproduto extends Model{
 	@RParam(rParamName = "p_sectionheader_1_text")
 	private String sectionheader_1_text;
 	
-	private List<Table_1> table_1 = new ArrayList<>();	
-	public void setTable_1(List<Table_1> table_1){
-		this.table_1 = table_1;
+	private List<Tabela_de_produto> tabela_de_produto = new ArrayList<>();	
+	public void setTabela_de_produto(List<Tabela_de_produto> tabela_de_produto){
+		this.tabela_de_produto = tabela_de_produto;
 	}
-	public List<Table_1> getTable_1(){
-		return this.table_1;
+	public List<Tabela_de_produto> getTabela_de_produto(){
+		return this.tabela_de_produto;
 	}
 
 	
@@ -29,7 +29,7 @@ public class Paginalistarproduto extends Model{
 	}
 
 
-	public static class Table_1 extends IGRPTable.Table{
+	public static class Tabela_de_produto extends IGRPTable.Table{
 		private String imagem="../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg";
 		private String imagem_uuid;
 		private String nome_do_produto;
@@ -37,6 +37,7 @@ public class Paginalistarproduto extends Model{
 		private String preco;
 		private String tipo_de_produto;
 		private String receita;
+		private String id_list;
 		public void setImagem(String imagem){
 			this.imagem = imagem;
 		}
@@ -85,10 +86,17 @@ public class Paginalistarproduto extends Model{
 			return this.receita;
 		}
 
+		public void setId_list(String id_list){
+			this.id_list = id_list;
+		}
+		public String getId_list(){
+			return this.id_list;
+		}
+
 	}
 
-	public void loadTable_1(BaseQueryInterface query) {
-		this.setTable_1(this.loadTable(query,Table_1.class));
+	public void loadTabela_de_produto(BaseQueryInterface query) {
+		this.setTabela_de_produto(this.loadTable(query,Tabela_de_produto.class));
 	}
 
 }

@@ -7,8 +7,8 @@ import nosi.core.webapp.Response;//
 /* Start-Code-Block (import) */
 /* End-Code-Block */
 /*----#start-code(packages_import)----*/
-
-
+import nosi.webapps.net_farma_app.dao.TblMedicamentos;
+import nosi.webapps.net_farma_app.helper.Listar_ProdutoHelper;
 /*----#end-code----*/
 		
 public class PaginalistarprodutoController extends Controller {
@@ -16,15 +16,15 @@ public class PaginalistarprodutoController extends Controller {
 		var model = new Paginalistarproduto();
 		model.load();
 		var view = new PaginalistarprodutoView();
+		view.id_list.setParam(true);
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadTable_1(Core.query(null,"SELECT '../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg' as imagem,'Perspiciatis sit amet sit magn' as nome_do_produto,'Unde lorem deserunt officia ip' as descricao,'Rem adipiscing ut consectetur' as preco,'Laudantium ut mollit iste offi' as tipo_de_produto,'Stract elit sit rem sed' as receita "));
+		model.loadTabela_de_produto(Core.query(null,"SELECT '../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg' as imagem,'Lorem sit ut elit iste' as nome_do_produto,'Natus omnis stract aliqua iste' as descricao,'Sit lorem deserunt aliqua dolo' as preco,'Sit voluptatem omnis totam ani' as tipo_de_produto,'Ut iste lorem unde magna' as receita,'hidden-df89_62a1' as id_list "));
 		  ----#gen-example */
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/
-		
-		
+		Listar_ProdutoHelper.with(Core.getSession(), model).listarProdutos();
 		/*----#end-code----*/
 		view.setModel(model);
 		return this.renderView(view);	
@@ -37,6 +37,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Registrar_medicamento","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
@@ -55,12 +56,13 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (listar_produtos)  *//* End-Code-Block  */
 		/*----#start-code(listar_produtos)----*/
-		
+
 		
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Paginalistarproduto","index", this.queryString());	
@@ -73,6 +75,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_dashboard","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
@@ -91,13 +94,14 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (visualizar)  *//* End-Code-Block  */
 		/*----#start-code(visualizar)----*/
-		
-		
+
+		this.addQueryString("p_id_list", Core.getParam("p_id_list"));
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
 	}
@@ -109,13 +113,15 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (editar)  *//* End-Code-Block  */
 		/*----#start-code(editar)----*/
-		
-		
+
+		this.addQueryString("p_id_list", Core.getParam("p_id_list"));
+
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
 	}
@@ -127,13 +133,13 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (eliminar)  *//* End-Code-Block  */
 		/*----#start-code(eliminar)----*/
-		
-		
+		Listar_ProdutoHelper.with(Core.getSession(), model).eliminarProd();
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Paginalistarproduto","index", this.queryString());	
 	}

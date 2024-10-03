@@ -81,23 +81,38 @@
         </box_1>
         <separatorlist_registrar type="separatorlist" xml-type="separatorlist" gen-clean="true" gen-type="container" gen-group="true">
             <fields>
-                <nome_medicamento name="p_nome_medicamento" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                <nome_medicamento name="p_nome_medicamento" type="text" maxlength="250" required="true" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
                     <label>Nome Medicamento</label>
-                    <value>Officia aperiam sed ut ipsum</value>
+                    <value>Dolor laudantium officia ipsum lorem</value>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </nome_medicamento>
-                <descricao_do_produto name="p_descricao_do_produto" type="textarea" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                <descricao_do_produto name="p_descricao_do_produto" type="textarea" maxlength="250" required="true" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
                     <label>Descrição do Produto</label>
-                    <value>Rem totam ut magna doloremque aliqua perspiciatis stract ut consectetur aliqua mollit natus iste laudantium</value>
+                    <value>Anim mollit lorem officia perspiciatis rem accusantium natus labore totam rem laudantium unde aliqua mollit</value>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </descricao_do_produto>
-                <preco_do_produto name="p_preco_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                <preco_do_produto name="p_preco_do_produto" type="text" maxlength="250" required="true" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
                     <label>Preço do Produto</label>
-                    <value>Dolor amet consectetur adipiscing laudantium</value>
+                    <value>Omnis accusantium perspiciatis mollit amet</value>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </preco_do_produto>
                 <image name="p_image" type="file" accept="image/*" targetrend="" multiple="false" rendvalue="false" maxlength="250" required="false" disabled="false" right="false" class="primary" desc="true">
                     <label>Imagem</label>
                     <value/>
                 </image>
-                <receita name="p_receita" type="select" multiple="false" tags="false" load_service_data="false" domain="Receita « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" desc="true">
+                <receita name="p_receita" type="select" multiple="false" tags="false" load_service_data="false" domain="Receita « net_farma_app" maxlength="250" required="true" change="false" disabled="false" right="false" java-type="" desc="true">
                     <label>Receita</label>
                     <list>
                         <option/>
@@ -110,12 +125,22 @@
                             <value>Não</value>
                         </option>
                     </list>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </receita>
-                <estoque name="p_estoque" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
+                <estoque name="p_estoque" type="text" maxlength="250" required="true" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" desc="true">
                     <label>Estoque</label>
-                    <value>Mollit amet totam natus lorem</value>
+                    <value>Stract totam ut amet natus</value>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </estoque>
-                <tipo_de_produto name="p_tipo_de_produto" type="select" multiple="false" tags="false" load_service_data="false" domain="Tipo de Produto « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" desc="true">
+                <tipo_de_produto name="p_tipo_de_produto" type="select" multiple="false" tags="false" load_service_data="false" domain="Tipo de Produto « net_farma_app" maxlength="250" required="true" change="false" disabled="false" right="false" java-type="" desc="true">
                     <label>Tipo de Produto</label>
                     <list>
                         <option/>
@@ -140,87 +165,92 @@
                             <value>Outros</value>
                         </option>
                     </list>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
                 </tipo_de_produto>
             </fields>
             <table>
                 <value>
                     <row>
-                        <nome_medicamento name="p_nome_medicamento" desc="true">Sed omnis labore voluptatem lorem</nome_medicamento>
-                        <nome_medicamento_check name="p_nome_medicamento_check">Sed omnis labore voluptatem lorem</nome_medicamento_check>
-                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Perspiciatis stract lorem anim sit perspiciatis doloremque aperiam voluptatem natus magna rem lorem aperiam natus</descricao_do_produto>
-                        <descricao_do_produto_check name="p_descricao_do_produto_check">Perspiciatis stract lorem anim sit perspiciatis doloremque aperiam voluptatem natus magna rem lorem aperiam natus</descricao_do_produto_check>
-                        <preco_do_produto name="p_preco_do_produto" desc="true">Elit sit stract stract aliqua</preco_do_produto>
-                        <preco_do_produto_check name="p_preco_do_produto_check">Elit sit stract stract aliqua</preco_do_produto_check>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Rem doloremque totam ut magna</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Rem doloremque totam ut magna</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Totam omnis natus accusantium totam ut ipsum aperiam iste doloremque aliqua rem sed aperiam unde</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Totam omnis natus accusantium totam ut ipsum aperiam iste doloremque aliqua rem sed aperiam unde</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Unde ipsum deserunt ipsum natus</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Unde ipsum deserunt ipsum natus</preco_do_produto_check>
                         <image name="p_image" desc="true"/>
                         <image_check name="p_image_check"/>
                         <receita name="p_receita" desc="true">2</receita>
                         <receita_check name="p_receita_check">2</receita_check>
-                        <estoque name="p_estoque" desc="true">Adipiscing voluptatem officia ut lorem</estoque>
-                        <estoque_check name="p_estoque_check">Adipiscing voluptatem officia ut lorem</estoque_check>
+                        <estoque name="p_estoque" desc="true">Labore dolor iste deserunt doloremque</estoque>
+                        <estoque_check name="p_estoque_check">Labore dolor iste deserunt doloremque</estoque_check>
                         <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
                         <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
                     </row>
                     <row>
-                        <nome_medicamento name="p_nome_medicamento" desc="true">Natus consectetur mollit officia stract</nome_medicamento>
-                        <nome_medicamento_check name="p_nome_medicamento_check">Natus consectetur mollit officia stract</nome_medicamento_check>
-                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Iste unde stract iste aliqua voluptatem sed sit aliqua labore doloremque sit anim deserunt omnis</descricao_do_produto>
-                        <descricao_do_produto_check name="p_descricao_do_produto_check">Iste unde stract iste aliqua voluptatem sed sit aliqua labore doloremque sit anim deserunt omnis</descricao_do_produto_check>
-                        <preco_do_produto name="p_preco_do_produto" desc="true">Officia dolor lorem unde aperiam</preco_do_produto>
-                        <preco_do_produto_check name="p_preco_do_produto_check">Officia dolor lorem unde aperiam</preco_do_produto_check>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Aliqua unde officia unde sed</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Aliqua unde officia unde sed</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Dolor perspiciatis rem ipsum laudantium adipiscing magna accusantium dolor deserunt natus magna stract adipiscing stract</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Dolor perspiciatis rem ipsum laudantium adipiscing magna accusantium dolor deserunt natus magna stract adipiscing stract</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Voluptatem perspiciatis sit doloremque aperiam</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Voluptatem perspiciatis sit doloremque aperiam</preco_do_produto_check>
                         <image name="p_image" desc="true"/>
                         <image_check name="p_image_check"/>
                         <receita name="p_receita" desc="true">2</receita>
                         <receita_check name="p_receita_check">2</receita_check>
-                        <estoque name="p_estoque" desc="true">Magna aperiam ipsum dolor natus</estoque>
-                        <estoque_check name="p_estoque_check">Magna aperiam ipsum dolor natus</estoque_check>
+                        <estoque name="p_estoque" desc="true">Officia mollit doloremque ut deserunt</estoque>
+                        <estoque_check name="p_estoque_check">Officia mollit doloremque ut deserunt</estoque_check>
                         <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
                         <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
                     </row>
                     <row>
-                        <nome_medicamento name="p_nome_medicamento" desc="true">Voluptatem aperiam unde labore ut</nome_medicamento>
-                        <nome_medicamento_check name="p_nome_medicamento_check">Voluptatem aperiam unde labore ut</nome_medicamento_check>
-                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Sit sed mollit natus amet iste laudantium omnis accusantium magna adipiscing anim natus dolor aliqua</descricao_do_produto>
-                        <descricao_do_produto_check name="p_descricao_do_produto_check">Sit sed mollit natus amet iste laudantium omnis accusantium magna adipiscing anim natus dolor aliqua</descricao_do_produto_check>
-                        <preco_do_produto name="p_preco_do_produto" desc="true">Dolor mollit iste mollit anim</preco_do_produto>
-                        <preco_do_produto_check name="p_preco_do_produto_check">Dolor mollit iste mollit anim</preco_do_produto_check>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Accusantium consectetur lorem stract labore</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Accusantium consectetur lorem stract labore</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Mollit natus totam mollit iste anim officia anim aliqua officia natus anim sit lorem laudantium</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Mollit natus totam mollit iste anim officia anim aliqua officia natus anim sit lorem laudantium</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Laudantium natus unde magna deserunt</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Laudantium natus unde magna deserunt</preco_do_produto_check>
                         <image name="p_image" desc="true"/>
                         <image_check name="p_image_check"/>
                         <receita name="p_receita" desc="true">2</receita>
                         <receita_check name="p_receita_check">2</receita_check>
-                        <estoque name="p_estoque" desc="true">Perspiciatis anim voluptatem ipsum adipiscing</estoque>
-                        <estoque_check name="p_estoque_check">Perspiciatis anim voluptatem ipsum adipiscing</estoque_check>
+                        <estoque name="p_estoque" desc="true">Consectetur labore aperiam amet natus</estoque>
+                        <estoque_check name="p_estoque_check">Consectetur labore aperiam amet natus</estoque_check>
                         <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
                         <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
                     </row>
                     <row>
-                        <nome_medicamento name="p_nome_medicamento" desc="true">Rem deserunt iste mollit stract</nome_medicamento>
-                        <nome_medicamento_check name="p_nome_medicamento_check">Rem deserunt iste mollit stract</nome_medicamento_check>
-                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Magna mollit sit rem lorem stract perspiciatis rem sit magna ut aliqua sit adipiscing sed</descricao_do_produto>
-                        <descricao_do_produto_check name="p_descricao_do_produto_check">Magna mollit sit rem lorem stract perspiciatis rem sit magna ut aliqua sit adipiscing sed</descricao_do_produto_check>
-                        <preco_do_produto name="p_preco_do_produto" desc="true">Sed totam ipsum sed deserunt</preco_do_produto>
-                        <preco_do_produto_check name="p_preco_do_produto_check">Sed totam ipsum sed deserunt</preco_do_produto_check>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Officia magna aperiam consectetur perspiciatis</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Officia magna aperiam consectetur perspiciatis</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Natus omnis laudantium lorem sed elit mollit rem elit omnis magna aliqua ut sit aliqua</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Natus omnis laudantium lorem sed elit mollit rem elit omnis magna aliqua ut sit aliqua</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Aliqua mollit lorem adipiscing aliqua</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Aliqua mollit lorem adipiscing aliqua</preco_do_produto_check>
                         <image name="p_image" desc="true"/>
                         <image_check name="p_image_check"/>
                         <receita name="p_receita" desc="true">2</receita>
                         <receita_check name="p_receita_check">2</receita_check>
-                        <estoque name="p_estoque" desc="true">Consectetur natus officia adipiscing accusantium</estoque>
-                        <estoque_check name="p_estoque_check">Consectetur natus officia adipiscing accusantium</estoque_check>
+                        <estoque name="p_estoque" desc="true">Stract sit natus adipiscing unde</estoque>
+                        <estoque_check name="p_estoque_check">Stract sit natus adipiscing unde</estoque_check>
                         <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
                         <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
                     </row>
                     <row>
-                        <nome_medicamento name="p_nome_medicamento" desc="true">Mollit totam accusantium ut doloremque</nome_medicamento>
-                        <nome_medicamento_check name="p_nome_medicamento_check">Mollit totam accusantium ut doloremque</nome_medicamento_check>
-                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Deserunt accusantium dolor officia sit deserunt stract laudantium consectetur sed sit lorem voluptatem amet accusantium</descricao_do_produto>
-                        <descricao_do_produto_check name="p_descricao_do_produto_check">Deserunt accusantium dolor officia sit deserunt stract laudantium consectetur sed sit lorem voluptatem amet accusantium</descricao_do_produto_check>
-                        <preco_do_produto name="p_preco_do_produto" desc="true">Laudantium elit adipiscing deserunt sit</preco_do_produto>
-                        <preco_do_produto_check name="p_preco_do_produto_check">Laudantium elit adipiscing deserunt sit</preco_do_produto_check>
+                        <nome_medicamento name="p_nome_medicamento" desc="true">Voluptatem ipsum ut accusantium aliqua</nome_medicamento>
+                        <nome_medicamento_check name="p_nome_medicamento_check">Voluptatem ipsum ut accusantium aliqua</nome_medicamento_check>
+                        <descricao_do_produto name="p_descricao_do_produto" desc="true">Omnis sed totam accusantium iste mollit lorem amet omnis labore rem doloremque dolor rem anim</descricao_do_produto>
+                        <descricao_do_produto_check name="p_descricao_do_produto_check">Omnis sed totam accusantium iste mollit lorem amet omnis labore rem doloremque dolor rem anim</descricao_do_produto_check>
+                        <preco_do_produto name="p_preco_do_produto" desc="true">Aliqua natus voluptatem totam officia</preco_do_produto>
+                        <preco_do_produto_check name="p_preco_do_produto_check">Aliqua natus voluptatem totam officia</preco_do_produto_check>
                         <image name="p_image" desc="true"/>
                         <image_check name="p_image_check"/>
                         <receita name="p_receita" desc="true">2</receita>
                         <receita_check name="p_receita_check">2</receita_check>
-                        <estoque name="p_estoque" desc="true">Rem voluptatem unde voluptatem lorem</estoque>
-                        <estoque_check name="p_estoque_check">Rem voluptatem unde voluptatem lorem</estoque_check>
+                        <estoque name="p_estoque" desc="true">Sit iste unde omnis sed</estoque>
+                        <estoque_check name="p_estoque_check">Sit iste unde omnis sed</estoque_check>
                         <tipo_de_produto name="p_tipo_de_produto" desc="true">2</tipo_de_produto>
                         <tipo_de_produto_check name="p_tipo_de_produto_check">2</tipo_de_produto_check>
                     </row>
