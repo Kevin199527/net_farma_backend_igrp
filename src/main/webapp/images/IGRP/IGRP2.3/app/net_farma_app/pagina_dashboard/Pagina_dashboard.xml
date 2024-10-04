@@ -65,6 +65,15 @@
                 <img>grey|fa-dashboard</img>
                 <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
             </item>
+            <item type="specific" code="" rel="toolsbar_1_button_1" refresh_components="">
+                <title>Button</title>
+                <app>net_farma_app</app>
+                <page>Pagina_dashboard</page>
+                <link>index</link>
+                <target>_blank</target>
+                <img>primary|fa-angle-right</img>
+                <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
+            </item>
         </toolsbar_1>
         <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
             <fields>
@@ -108,7 +117,7 @@
             <fields>
                 <circlestatbox_estoque_title name="p_circlestatbox_estoque_title" type="text" maxlength="4000">
                     <label>Circle Box Title</label>
-                    <value>Estoque</value>
+                    <value>Total de Produto em Estoque</value>
                 </circlestatbox_estoque_title>
                 <circlestatbox_estoque_lbl name="p_circlestatbox_estoque_lbl" type="text" maxlength="4000">
                     <label>Percent Text</label>
@@ -244,9 +253,9 @@
                 </circlestatbox_4_bg>
             </fields>
         </circlestatbox_4>
-        <chart_1 type="chart" xml-type="chart" title="Chart" gen-type="container" gen-group="">
+        <chart_3 type="chart" xml-type="chart" title="Quantidade de Vendas Anuais por Tipo de Produto" gen-type="container" gen-group="">
             <caption/>
-            <chart_type>column</chart_type>
+            <chart_type>line</chart_type>
             <xaxys>Eixo de X</xaxys>
             <yaxys>Eixo de Y</yaxys>
             <url>#</url>
@@ -260,33 +269,33 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>532</col>
-                    <col>568</col>
-                    <col>854</col>
-                    <col>909</col>
+                    <col>199</col>
+                    <col>583</col>
+                    <col>278</col>
+                    <col>456</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>47</col>
-                    <col>433</col>
-                    <col>75</col>
-                    <col>927</col>
+                    <col>341</col>
+                    <col>428</col>
+                    <col>946</col>
+                    <col>962</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>669</col>
-                    <col>604</col>
-                    <col>416</col>
+                    <col>643</col>
+                    <col>136</col>
+                    <col>863</col>
                 </row>
             </value>
             <colors>
-                <col>#6a19e1</col>
-                <col>#80076d</col>
-                <col>#b4b212</col>
-                <col>#8a217e</col>
+                <col>#a8d77d</col>
+                <col>#d6ccc5</col>
+                <col>#8d8217</col>
+                <col>#c5abcd</col>
             </colors>
-        </chart_1>
+        </chart_3>
         <chart_2 type="chart" xml-type="chart" title="Chart" gen-type="container" gen-group="">
             <caption/>
             <chart_type>pie</chart_type>
@@ -303,36 +312,36 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>867</col>
-                    <col>349</col>
-                    <col>876</col>
-                    <col>889</col>
+                    <col>787</col>
+                    <col>411</col>
+                    <col>286</col>
+                    <col>658</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>150</col>
-                    <col>799</col>
-                    <col>559</col>
-                    <col>457</col>
+                    <col>356</col>
+                    <col>760</col>
+                    <col>937</col>
+                    <col>737</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>65</col>
-                    <col>652</col>
-                    <col>217</col>
+                    <col>170</col>
+                    <col>851</col>
+                    <col>302</col>
                 </row>
             </value>
             <colors>
-                <col>#c614f8</col>
-                <col>#6871ed</col>
-                <col>#8687bf</col>
-                <col>#409cfd</col>
+                <col>#79a046</col>
+                <col>#6760e4</col>
+                <col>#637e11</col>
+                <col>#e9fd59</col>
             </colors>
         </chart_2>
-        <chart_3 type="chart" xml-type="chart" title="Venda por ano e cada meses" gen-type="container" gen-group="">
+        <chart_1 type="chart" xml-type="chart" title="Estoque do Produtos" gen-type="container" gen-group="">
             <caption/>
-            <chart_type>line</chart_type>
+            <chart_type>bar</chart_type>
             <xaxys>Eixo de X</xaxys>
             <yaxys>Eixo de Y</yaxys>
             <url>#</url>
@@ -346,33 +355,132 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>573</col>
-                    <col>977</col>
-                    <col>141</col>
-                    <col>335</col>
+                    <col>63</col>
+                    <col>602</col>
+                    <col>920</col>
+                    <col>354</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>3</col>
-                    <col>84</col>
-                    <col>558</col>
-                    <col>211</col>
+                    <col>947</col>
+                    <col>508</col>
+                    <col>312</col>
+                    <col>26</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>884</col>
-                    <col>383</col>
-                    <col>606</col>
+                    <col>521</col>
+                    <col>754</col>
+                    <col>955</col>
                 </row>
             </value>
             <colors>
-                <col>#7e21f1</col>
-                <col>#749d8e</col>
-                <col>#3ff29f</col>
-                <col>#878631</col>
+                <col>#79153d</col>
+                <col>#fd8da1</col>
+                <col>#ec9d2b</col>
+                <col>#a0a3de</col>
             </colors>
-        </chart_3>
+        </chart_1>
+        <table_dados_de_venda type="table" xml-type="table" title="Dados de Venda" gen-type="container" gen-group="true">
+            <fields>
+                <estado name="p_estado" type="color" format="hex" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Estado</label>
+                </estado>
+                <nome_de_produto name="p_nome_de_produto" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Nome de Produto</label>
+                </nome_de_produto>
+                <tipo_de_produto name="p_tipo_de_produto" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Tipo de Produto</label>
+                </tipo_de_produto>
+                <quantidade name="p_quantidade" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Quantidade</label>
+                </quantidade>
+                <preco_unitario name="p_preco_unitario" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Preço Unitario</label>
+                </preco_unitario>
+                <data_de_venda name="p_data_de_venda" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Data de Venda</label>
+                </data_de_venda>
+                <metodo_de_pagamento name="p_metodo_de_pagamento" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Metodo de Pagamento</label>
+                </metodo_de_pagamento>
+                <valor_total_pago name="p_valor_total_pago" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Valor Total Pago</label>
+                </valor_total_pago>
+            </fields>
+            <table>
+                <value>
+                    <row>
+                        <estado name="p_estado">3</estado>
+                        <nome_de_produto name="p_nome_de_produto">Deserunt consectetur laudantiu</nome_de_produto>
+                        <tipo_de_produto name="p_tipo_de_produto">Doloremque laudantium doloremq</tipo_de_produto>
+                        <quantidade name="p_quantidade">Ipsum voluptatem aperiam dolor</quantidade>
+                        <preco_unitario name="p_preco_unitario">Natus rem doloremque laudantiu</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Voluptatem perspiciatis volupt</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Stract consectetur doloremque</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Officia deserunt ipsum unde ut</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">1</estado>
+                        <nome_de_produto name="p_nome_de_produto">Lorem officia iste magna molli</nome_de_produto>
+                        <tipo_de_produto name="p_tipo_de_produto">Magna anim rem lorem elit</tipo_de_produto>
+                        <quantidade name="p_quantidade">Amet iste omnis stract iste</quantidade>
+                        <preco_unitario name="p_preco_unitario">Labore sit sed mollit sed</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Rem totam sit aliqua unde</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Consectetur aperiam omnis rem</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Ipsum aliqua ipsum natus offic</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">3</estado>
+                        <nome_de_produto name="p_nome_de_produto">Unde anim aliqua aperiam lorem</nome_de_produto>
+                        <tipo_de_produto name="p_tipo_de_produto">Voluptatem unde ipsum rem aliq</tipo_de_produto>
+                        <quantidade name="p_quantidade">Iste consectetur iste natus om</quantidade>
+                        <preco_unitario name="p_preco_unitario">Natus elit rem consectetur off</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Anim stract ipsum magna elit</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Laudantium natus laudantium la</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Voluptatem sed omnis aperiam n</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">1</estado>
+                        <nome_de_produto name="p_nome_de_produto">Sit lorem elit omnis aperiam</nome_de_produto>
+                        <tipo_de_produto name="p_tipo_de_produto">Aperiam dolor stract elit adip</tipo_de_produto>
+                        <quantidade name="p_quantidade">Adipiscing totam natus totam l</quantidade>
+                        <preco_unitario name="p_preco_unitario">Totam consectetur voluptatem a</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Unde iste sed perspiciatis ips</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Ipsum perspiciatis sit consect</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Sit iste accusantium rem totam</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">1</estado>
+                        <nome_de_produto name="p_nome_de_produto">Sit aperiam voluptatem sit dol</nome_de_produto>
+                        <tipo_de_produto name="p_tipo_de_produto">Aperiam labore sit doloremque</tipo_de_produto>
+                        <quantidade name="p_quantidade">Amet accusantium natus ut amet</quantidade>
+                        <preco_unitario name="p_preco_unitario">Deserunt ipsum rem laudantium</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Voluptatem sed consectetur adi</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Aliqua omnis unde amet accusan</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Natus labore omnis anim amet</valor_total_pago>
+                    </row>
+                </value>
+                <legend_color>
+                    <item>
+                        <label>Cancelado</label>
+                        <value>1</value>
+                        <color>#dc2b4c</color>
+                    </item>
+                    <item>
+                        <label>Pendente</label>
+                        <value>2</value>
+                        <color>#ea9126</color>
+                    </item>
+                    <item>
+                        <label>Concluido</label>
+                        <value>3</value>
+                        <color>#95c11f</color>
+                    </item>
+                </legend_color>
+            </table>
+        </table_dados_de_venda>
     </content>
     <blockly>
         <imports></imports>

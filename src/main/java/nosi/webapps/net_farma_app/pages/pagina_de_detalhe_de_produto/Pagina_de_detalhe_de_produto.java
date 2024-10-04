@@ -25,8 +25,8 @@ public class Pagina_de_detalhe_de_produto extends Model{
 	@RParam(rParamName = "p_contem_receita")
 	private String contem_receita;
 
-	@RParam(rParamName = "p_descricao")
-	private String descricao;
+	@RParam(rParamName = "p_descricao_do_produto")
+	private String descricao_do_produto;
 
 	@RParam(rParamName = "p_id_list")
 	private String id_list;
@@ -79,11 +79,11 @@ public class Pagina_de_detalhe_de_produto extends Model{
 		return this.contem_receita;
 	}
 	
-	public void setDescricao(String descricao){
-		this.descricao = descricao;
+	public void setDescricao_do_produto(String descricao_do_produto){
+		this.descricao_do_produto = descricao_do_produto;
 	}
-	public String getDescricao(){
-		return this.descricao;
+	public String getDescricao_do_produto(){
+		return this.descricao_do_produto;
 	}
 	
 	public void setId_list(String id_list){

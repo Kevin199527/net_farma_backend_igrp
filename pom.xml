@@ -140,12 +140,14 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	<!-- Dependency repository
+
 	<repositories>
 		<repository>
 			<id>nexusdeploymentrepo</id>
 			<url>https://sonatype.nosi.cv/repository/maven-releases/</url>
 		</repository>
 	</repositories>
+	<!-- Dependency repository
+
 	 -->
 </project>

@@ -4,12 +4,10 @@ import nosi.core.webapp.Controller;//
 import java.io.IOException;//
 import nosi.core.webapp.Core;//
 import nosi.core.webapp.Response;//
-import nosi.webapps.net_farma_app.helper.Pagina_DetalheHelper;
 /* Start-Code-Block (import) */
 /* End-Code-Block */
 /*----#start-code(packages_import)----*/
-
-
+import nosi.webapps.net_farma_app.helper.Pagina_DetalheHelper;
 /*----#end-code----*/
 		
 public class Pagina_de_detalhe_de_produtoController extends Controller {
@@ -19,7 +17,7 @@ public class Pagina_de_detalhe_de_produtoController extends Controller {
 		var view = new Pagina_de_detalhe_de_produtoView();
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/
-		Pagina_DetalheHelper.with(Core.getSession(), model).receberDadosPageDetalhe();
+		Pagina_DetalheHelper.with(Core.getSession(), model, view).receberDadosPageDetalhe();
 		/*----#end-code----*/
 		view.setModel(model);
 		return this.renderView(view);	
@@ -37,7 +35,8 @@ public class Pagina_de_detalhe_de_produtoController extends Controller {
 		  ----#gen-example */
 		/* Start-Code-Block (concluir)  *//* End-Code-Block  */
 		/*----#start-code(concluir)----*/
-
+		
+		
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
 	}

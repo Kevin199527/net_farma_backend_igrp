@@ -55,24 +55,24 @@
                 </form_1_img_1>
                 <nome_do_produto name="p_nome_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Nome do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Nome do Produto</label>
-                    <value>Omnis voluptatem magna lorem accusantium</value>
+                    <value>Aliqua voluptatem ut amet adipiscing</value>
                 </nome_do_produto>
                 <preco_do_produto name="p_preco_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Preço do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Preço do Produto</label>
-                    <value>Anim accusantium sit officia voluptatem</value>
+                    <value>Rem doloremque sed stract lorem</value>
                 </preco_do_produto>
                 <tipo_de_produto name="p_tipo_de_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Tipo de Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Tipo de Produto</label>
-                    <value>Aperiam omnis anim accusantium lorem</value>
+                    <value>Sit anim unde mollit dolor</value>
                 </tipo_de_produto>
                 <contem_receita name="p_contem_receita" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="Contem Receita" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Contem Receita</label>
-                    <value>Rem sit ut dolor ut</value>
+                    <value>Accusantium lorem ut anim adipiscing</value>
                 </contem_receita>
-                <descricao name="p_descricao" type="textarea" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
-                    <label>Descrição</label>
-                    <value>Mollit anim sit mollit omnis stract consectetur sit aliqua totam deserunt accusantium labore iste voluptatem</value>
-                </descricao>
+                <descricao_do_produto name="p_descricao_do_produto" type="textarea" maxlength="250" required="false" change="false" readonly="false" disabled="true" disablehtml="true" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Descrição do Produto</label>
+                    <value>Laudantium amet officia stract totam sit natus totam unde magna officia omnis anim accusantium voluptatem</value>
+                </descricao_do_produto>
                 <hidden name="p_id_list" type="hidden" maxlength="250" java-type="" tooltip="false" disable_copy_paste="false" tag="id_list"/>
             </fields>
             <tools-bar>

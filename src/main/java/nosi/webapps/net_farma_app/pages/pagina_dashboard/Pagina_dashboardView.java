@@ -5,6 +5,8 @@ import nosi.core.webapp.View;
 import nosi.core.gui.components.*;
 import nosi.core.gui.fields.*;
 import static nosi.core.i18n.Translator.gt;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class Pagina_dashboardView extends View {
 
@@ -45,6 +47,14 @@ public class Pagina_dashboardView extends View {
 	public Field circlestatbox_4_desc;
 	public Field circlestatbox_4_url;
 	public Field circlestatbox_4_bg;
+	public Field estado;
+	public Field nome_de_produto;
+	public Field tipo_de_produto;
+	public Field quantidade;
+	public Field preco_unitario;
+	public Field data_de_venda;
+	public Field metodo_de_pagamento;
+	public Field valor_total_pago;
 	public IGRPSectionHeader sectionheader_1;
 	public IGRPCircleStatBox circlestatbox_produto;
 	public IGRPCircleStatBox circlestatbox_estoque;
@@ -52,14 +62,16 @@ public class Pagina_dashboardView extends View {
 	public IGRPCircleStatBox circlestatbox_fornecedor;
 	public IGRPCircleStatBox circlestatbox_venda;
 	public IGRPCircleStatBox circlestatbox_4;
-	public IGRPChart chart_1;
-	public IGRPChart chart_2;
 	public IGRPChart chart_3;
+	public IGRPChart chart_2;
+	public IGRPChart chart_1;
+	public IGRPTable table_dados_de_venda;
 
 	public IGRPToolsBar toolsbar_1;
 	public IGRPButton btn_registrar_produtos;
 	public IGRPButton btn_listar_produtos;
 	public IGRPButton btn_dashboard;
+	public IGRPButton btn_toolsbar_1_button_1;
 
 	public Pagina_dashboardView(){
 
@@ -79,11 +91,13 @@ public class Pagina_dashboardView extends View {
 
 		circlestatbox_4 = new IGRPCircleStatBox("circlestatbox_4","");
 
-		chart_1 = new IGRPChart("chart_1","Chart");
+		chart_3 = new IGRPChart("chart_3","Quantidade de Vendas Anuais por Tipo de Produto");
 
 		chart_2 = new IGRPChart("chart_2","Chart");
 
-		chart_3 = new IGRPChart("chart_3","Venda por ano e cada meses");
+		chart_1 = new IGRPChart("chart_1","Estoque do Produtos");
+
+		table_dados_de_venda = new IGRPTable("table_dados_de_venda","Dados de Venda");
 
 		sectionheader_1_text = new TextField(model,"sectionheader_1_text");
 		sectionheader_1_text.setLabel(gt(""));
@@ -234,6 +248,38 @@ public class Pagina_dashboardView extends View {
 		circlestatbox_4_bg.setLabel(gt("Background"));
 		circlestatbox_4_bg.propertie().add("name","p_circlestatbox_4_bg").add("type","text").add("maxlength","4000");
 		
+		estado = new ColorField(model,"estado");
+		estado.setLabel(gt("Estado"));
+		estado.propertie().add("name","p_estado").add("type","color").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		nome_de_produto = new TextField(model,"nome_de_produto");
+		nome_de_produto.setLabel(gt("Nome de Produto"));
+		nome_de_produto.propertie().add("name","p_nome_de_produto").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		tipo_de_produto = new TextField(model,"tipo_de_produto");
+		tipo_de_produto.setLabel(gt("Tipo de Produto"));
+		tipo_de_produto.propertie().add("name","p_tipo_de_produto").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		quantidade = new TextField(model,"quantidade");
+		quantidade.setLabel(gt("Quantidade"));
+		quantidade.propertie().add("name","p_quantidade").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		preco_unitario = new TextField(model,"preco_unitario");
+		preco_unitario.setLabel(gt("Preço Unitario"));
+		preco_unitario.propertie().add("name","p_preco_unitario").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		data_de_venda = new TextField(model,"data_de_venda");
+		data_de_venda.setLabel(gt("Data de Venda"));
+		data_de_venda.propertie().add("name","p_data_de_venda").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		metodo_de_pagamento = new TextField(model,"metodo_de_pagamento");
+		metodo_de_pagamento.setLabel(gt("Metodo de Pagamento"));
+		metodo_de_pagamento.propertie().add("name","p_metodo_de_pagamento").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		valor_total_pago = new TextField(model,"valor_total_pago");
+		valor_total_pago.setLabel(gt("Valor Total Pago"));
+		valor_total_pago.propertie().add("name","p_valor_total_pago").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
 
 		toolsbar_1 = new IGRPToolsBar("toolsbar_1");
 
@@ -246,27 +292,30 @@ public class Pagina_dashboardView extends View {
 		btn_dashboard = new IGRPButton("Dashboard","net_farma_app","Pagina_dashboard","dashboard","_self","grey|fa-dashboard","","");
 		btn_dashboard.propertie.add("type","specific").add("rel","dashboard").add("refresh_components","");
 
+		btn_toolsbar_1_button_1 = new IGRPButton("Button","net_farma_app","Pagina_dashboard","toolsbar_1_button_1","_blank","primary|fa-angle-right","","");
+		btn_toolsbar_1_button_1.propertie.add("type","specific").add("rel","toolsbar_1_button_1").add("refresh_components","");
+
 		
-		chart_1.setCaption("");
-		chart_1.setChart_type("column");
-		chart_1.setXaxys("Eixo de X");
-		chart_1.setYaxys("Eixo de Y");
-		chart_1.setUrl("#");
-		//ex: chart_1.addColor("#f037a8").addColor("#313480").addColor("#b986a2").addColor("#a3d07b");
+		chart_3.setCaption("");
+		chart_3.setChart_type("line");
+		chart_3.setXaxys("Eixo de X");
+		chart_3.setYaxys("Eixo de Y");
+		chart_3.setUrl("#");
+		//ex: chart_3.addColor("#ae2b52").addColor("#20547e").addColor("#d26710").addColor("#56c425");
 
 		chart_2.setCaption("");
 		chart_2.setChart_type("pie");
 		chart_2.setXaxys("Eixo de X");
 		chart_2.setYaxys("Eixo de Y");
 		chart_2.setUrl("#");
-		//ex: chart_2.addColor("#c98ac1").addColor("#c21d53").addColor("#65d9e0").addColor("#1df1cd");
+		//ex: chart_2.addColor("#b64e29").addColor("#e35368").addColor("#957510").addColor("#01ef89");
 
-		chart_3.setCaption("");
-		chart_3.setChart_type("line");
-		chart_3.setXaxys("Eixo de X");
-		chart_3.setYaxys("Eixo de Y");
-		chart_3.setUrl("#");
-		//ex: chart_3.addColor("#0aec90").addColor("#102351").addColor("#a02ae6").addColor("#ad1f29");
+		chart_1.setCaption("");
+		chart_1.setChart_type("bar");
+		chart_1.setXaxys("Eixo de X");
+		chart_1.setYaxys("Eixo de Y");
+		chart_1.setUrl("#");
+		//ex: chart_1.addColor("#1e00a5").addColor("#b120ea").addColor("#aaf109").addColor("#1e3f16");
 
 	}
 		
@@ -321,9 +370,31 @@ public class Pagina_dashboardView extends View {
 
 
 
+		table_dados_de_venda.addField(estado);
+		table_dados_de_venda.addField(nome_de_produto);
+		table_dados_de_venda.addField(tipo_de_produto);
+		table_dados_de_venda.addField(quantidade);
+		table_dados_de_venda.addField(preco_unitario);
+		table_dados_de_venda.addField(data_de_venda);
+		table_dados_de_venda.addField(metodo_de_pagamento);
+		table_dados_de_venda.addField(valor_total_pago);
+		/* start table_dados_de_venda legend colors*/
+		Map<Object, Map<String, String>> table_dados_de_venda_colors= new LinkedHashMap<>();
+		Map<String, String> color_dc2b4c_table_dados_de_venda = new LinkedHashMap<>();
+		color_dc2b4c_table_dados_de_venda.put("#dc2b4c","Cancelado");
+		table_dados_de_venda_colors.put("1",color_dc2b4c_table_dados_de_venda);
+		Map<String, String> color_ea9126_table_dados_de_venda = new LinkedHashMap<>();
+		color_ea9126_table_dados_de_venda.put("#ea9126","Pendente");
+		table_dados_de_venda_colors.put("2",color_ea9126_table_dados_de_venda);
+		Map<String, String> color_95c11f_table_dados_de_venda = new LinkedHashMap<>();
+		color_95c11f_table_dados_de_venda.put("#95c11f","Concluido");
+		table_dados_de_venda_colors.put("3",color_95c11f_table_dados_de_venda);
+		this.table_dados_de_venda.setLegendColors(table_dados_de_venda_colors);
+		/* end table_dados_de_venda legend colors*/
 		toolsbar_1.addButton(btn_registrar_produtos);
 		toolsbar_1.addButton(btn_listar_produtos);
 		toolsbar_1.addButton(btn_dashboard);
+		toolsbar_1.addButton(btn_toolsbar_1_button_1);
 		this.addToPage(sectionheader_1);
 		this.addToPage(circlestatbox_produto);
 		this.addToPage(circlestatbox_estoque);
@@ -331,9 +402,10 @@ public class Pagina_dashboardView extends View {
 		this.addToPage(circlestatbox_fornecedor);
 		this.addToPage(circlestatbox_venda);
 		this.addToPage(circlestatbox_4);
-		this.addToPage(chart_1);
-		this.addToPage(chart_2);
 		this.addToPage(chart_3);
+		this.addToPage(chart_2);
+		this.addToPage(chart_1);
+		this.addToPage(table_dados_de_venda);
 		this.addToPage(toolsbar_1);
 	}
 		
@@ -375,10 +447,19 @@ public class Pagina_dashboardView extends View {
 		circlestatbox_4_val.setValue(model);
 		circlestatbox_4_desc.setValue(model);
 		circlestatbox_4_url.setValue(model);
-		circlestatbox_4_bg.setValue(model);	
+		circlestatbox_4_bg.setValue(model);
+		estado.setValue(model);
+		nome_de_produto.setValue(model);
+		tipo_de_produto.setValue(model);
+		quantidade.setValue(model);
+		preco_unitario.setValue(model);
+		data_de_venda.setValue(model);
+		metodo_de_pagamento.setValue(model);
+		valor_total_pago.setValue(model);	
 
-		chart_1.loadModel(((Pagina_dashboard) model).getChart_1());
-		chart_2.loadModel(((Pagina_dashboard) model).getChart_2());
 		chart_3.loadModel(((Pagina_dashboard) model).getChart_3());
+		chart_2.loadModel(((Pagina_dashboard) model).getChart_2());
+		chart_1.loadModel(((Pagina_dashboard) model).getChart_1());
+		table_dados_de_venda.loadModel(((Pagina_dashboard) model).getTable_dados_de_venda());
 		}
 }

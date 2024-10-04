@@ -9,6 +9,7 @@ import nosi.core.webapp.Response;//
 /*----#start-code(packages_import)----*/
 import nosi.webapps.net_farma_app.dao.TblMedicamentos;
 import nosi.webapps.net_farma_app.helper.Listar_ProdutoHelper;
+import nosi.webapps.net_farma_app.helper.Pagina_DetalheHelper;
 /*----#end-code----*/
 		
 public class PaginalistarprodutoController extends Controller {
@@ -100,7 +101,7 @@ public class PaginalistarprodutoController extends Controller {
 		  ----#gen-example */
 		/* Start-Code-Block (visualizar)  *//* End-Code-Block  */
 		/*----#start-code(visualizar)----*/
-
+		this.addQueryString("p_detalhe", "SIM");
 		this.addQueryString("p_id_list", Core.getParam("p_id_list"));
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
@@ -119,7 +120,7 @@ public class PaginalistarprodutoController extends Controller {
 		  ----#gen-example */
 		/* Start-Code-Block (editar)  *//* End-Code-Block  */
 		/*----#start-code(editar)----*/
-
+		this.addQueryString("p_editar", "SIM");
 		this.addQueryString("p_id_list", Core.getParam("p_id_list"));
 
 		/*----#end-code----*/

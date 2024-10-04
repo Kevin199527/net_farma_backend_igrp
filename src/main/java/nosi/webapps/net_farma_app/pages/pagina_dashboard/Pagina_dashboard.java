@@ -1,5 +1,6 @@
 package nosi.webapps.net_farma_app.pages.pagina_dashboard;
 
+import nosi.core.gui.components.IGRPTable;
 import nosi.core.webapp.Model;
 import nosi.core.webapp.RParam;
 import nosi.core.webapp.databse.helpers.BaseQueryInterface;
@@ -121,12 +122,12 @@ public class Pagina_dashboard extends Model{
 	@RParam(rParamName = "p_circlestatbox_4_bg")
 	private String circlestatbox_4_bg;
 	
-	private List<Chart_1> chart_1 = new ArrayList<>();	
-	public void setChart_1(List<Chart_1> chart_1){
-		this.chart_1 = chart_1;
+	private List<Chart_3> chart_3 = new ArrayList<>();	
+	public void setChart_3(List<Chart_3> chart_3){
+		this.chart_3 = chart_3;
 	}
-	public List<Chart_1> getChart_1(){
-		return this.chart_1;
+	public List<Chart_3> getChart_3(){
+		return this.chart_3;
 	}
 
 	
@@ -139,12 +140,21 @@ public class Pagina_dashboard extends Model{
 	}
 
 	
-	private List<Chart_3> chart_3 = new ArrayList<>();	
-	public void setChart_3(List<Chart_3> chart_3){
-		this.chart_3 = chart_3;
+	private List<Chart_1> chart_1 = new ArrayList<>();	
+	public void setChart_1(List<Chart_1> chart_1){
+		this.chart_1 = chart_1;
 	}
-	public List<Chart_3> getChart_3(){
-		return this.chart_3;
+	public List<Chart_1> getChart_1(){
+		return this.chart_1;
+	}
+
+	
+	private List<Table_dados_de_venda> table_dados_de_venda = new ArrayList<>();	
+	public void setTable_dados_de_venda(List<Table_dados_de_venda> table_dados_de_venda){
+		this.table_dados_de_venda = table_dados_de_venda;
+	}
+	public List<Table_dados_de_venda> getTable_dados_de_venda(){
+		return this.table_dados_de_venda;
 	}
 
 	
@@ -408,11 +418,77 @@ public class Pagina_dashboard extends Model{
 	}
 
 
-	public static class Chart_1 extends IGRPChart3D{
-		public Chart_1(String eixoX, String eixoY, Object eixoZ) {
+	public static class Table_dados_de_venda extends IGRPTable.Table{
+		private String estado;
+		private String nome_de_produto;
+		private String tipo_de_produto;
+		private String quantidade;
+		private String preco_unitario;
+		private String data_de_venda;
+		private String metodo_de_pagamento;
+		private String valor_total_pago;
+		public void setEstado(String estado){
+			this.estado = estado;
+		}
+		public String getEstado(){
+			return this.estado;
+		}
+
+		public void setNome_de_produto(String nome_de_produto){
+			this.nome_de_produto = nome_de_produto;
+		}
+		public String getNome_de_produto(){
+			return this.nome_de_produto;
+		}
+
+		public void setTipo_de_produto(String tipo_de_produto){
+			this.tipo_de_produto = tipo_de_produto;
+		}
+		public String getTipo_de_produto(){
+			return this.tipo_de_produto;
+		}
+
+		public void setQuantidade(String quantidade){
+			this.quantidade = quantidade;
+		}
+		public String getQuantidade(){
+			return this.quantidade;
+		}
+
+		public void setPreco_unitario(String preco_unitario){
+			this.preco_unitario = preco_unitario;
+		}
+		public String getPreco_unitario(){
+			return this.preco_unitario;
+		}
+
+		public void setData_de_venda(String data_de_venda){
+			this.data_de_venda = data_de_venda;
+		}
+		public String getData_de_venda(){
+			return this.data_de_venda;
+		}
+
+		public void setMetodo_de_pagamento(String metodo_de_pagamento){
+			this.metodo_de_pagamento = metodo_de_pagamento;
+		}
+		public String getMetodo_de_pagamento(){
+			return this.metodo_de_pagamento;
+		}
+
+		public void setValor_total_pago(String valor_total_pago){
+			this.valor_total_pago = valor_total_pago;
+		}
+		public String getValor_total_pago(){
+			return this.valor_total_pago;
+		}
+
+	}
+	public static class Chart_3 extends IGRPChart3D{
+		public Chart_3(String eixoX, String eixoY, Object eixoZ) {
 			super(eixoX, eixoY,eixoZ);
 		}
-		public Chart_1() {
+		public Chart_3() {
 		}
 	}
 	public static class Chart_2 extends IGRPChart2D{
@@ -422,24 +498,28 @@ public class Pagina_dashboard extends Model{
 		public Chart_2() {
 		}
 	}
-	public static class Chart_3 extends IGRPChart3D{
-		public Chart_3(String eixoX, String eixoY, Object eixoZ) {
+	public static class Chart_1 extends IGRPChart3D{
+		public Chart_1(String eixoX, String eixoY, Object eixoZ) {
 			super(eixoX, eixoY,eixoZ);
 		}
-		public Chart_3() {
+		public Chart_1() {
 		}
 	}
 
-	public void loadChart_1(BaseQueryInterface query) {
-		this.setChart_1(this.loadTable(query,Chart_1.class));
+	public void loadChart_3(BaseQueryInterface query) {
+		this.setChart_3(this.loadTable(query,Chart_3.class));
 	}
 
 	public void loadChart_2(BaseQueryInterface query) {
 		this.setChart_2(this.loadTable(query,Chart_2.class));
 	}
 
-	public void loadChart_3(BaseQueryInterface query) {
-		this.setChart_3(this.loadTable(query,Chart_3.class));
+	public void loadChart_1(BaseQueryInterface query) {
+		this.setChart_1(this.loadTable(query,Chart_1.class));
+	}
+
+	public void loadTable_dados_de_venda(BaseQueryInterface query) {
+		this.setTable_dados_de_venda(this.loadTable(query,Table_dados_de_venda.class));
 	}
 
 }
