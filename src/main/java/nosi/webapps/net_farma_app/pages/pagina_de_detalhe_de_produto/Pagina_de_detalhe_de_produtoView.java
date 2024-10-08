@@ -56,9 +56,9 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		contem_receita.setLabel(gt("Contem Receita"));
 		contem_receita.propertie().add("name","p_contem_receita").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","true").add("disablehtml","true").add("placeholder",gt("Contem Receita")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
 		
-		descricao_do_produto = new TextAreaField(model,"descricao_do_produto");
+		descricao_do_produto = new TextEditorField(model,"descricao_do_produto");
 		descricao_do_produto.setLabel(gt("Descrição do Produto"));
-		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","textarea").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","true").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false");
+		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","texteditor").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","true").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false");
 		
 		id_list = new HiddenField(model,"id_list");
 		id_list.setLabel(gt(""));

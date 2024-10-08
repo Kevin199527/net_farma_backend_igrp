@@ -3,7 +3,6 @@ package nosi.webapps.net_farma_app.helper;
 import nosi.core.webapp.Core;
 import nosi.core.webapp.business.IgrpPageHelper;
 import nosi.webapps.net_farma_app.dao.TblMedicamentos;
-import nosi.webapps.net_farma_app.pages.pagina_dashboard.Pagina_dashboardView;
 import nosi.webapps.net_farma_app.pages.pagina_de_detalhe_de_produto.Pagina_de_detalhe_de_produto;
 import nosi.webapps.net_farma_app.pages.pagina_de_detalhe_de_produto.Pagina_de_detalhe_de_produtoView;
 import org.hibernate.Session;

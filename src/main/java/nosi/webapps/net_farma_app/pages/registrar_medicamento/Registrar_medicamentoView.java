@@ -46,9 +46,9 @@ public class Registrar_medicamentoView extends View {
 		nome_medicamento.setLabel(gt("Nome Medicamento"));
 		nome_medicamento.propertie().add("name","p_nome_medicamento").add("type","text").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
-		descricao_do_produto = new TextAreaField(model,"descricao_do_produto");
+		descricao_do_produto = new TextEditorField(model,"descricao_do_produto");
 		descricao_do_produto.setLabel(gt("Descrição do Produto"));
-		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","textarea").add("maxlength","250").add("required","true").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
+		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","texteditor").add("maxlength","250000").add("required","true").add("readonly","false").add("disabled","false").add("placeholder",gt("")).add("desclabel","false").add("desc","true");
 		
 		preco_do_produto = new TextField(model,"preco_do_produto");
 		preco_do_produto.setLabel(gt("Preço do Produto"));

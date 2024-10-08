@@ -64,7 +64,6 @@ public class Registrar_medicamento extends Model{
 		private Pair separatorlist_registrar_id;
 		@PairNotNull()
 private Pair nome_medicamento;
-		@PairNotNull()
 private Pair descricao_do_produto;
 		@PairNotNull()
 private Pair preco_do_produto;

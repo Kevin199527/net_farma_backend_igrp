@@ -7,6 +7,7 @@ import nosi.webapps.net_farma_app.pages.paginalistarproduto.PaginalistarprodutoV
 import org.hibernate.Session;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, PaginalistarprodutoView> {
 
@@ -40,6 +41,7 @@ public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, Pa
 
                 tabelaDeProdutos.add(row);
             }
+
 
             model.setTabela_de_produto(tabelaDeProdutos);
         }else{

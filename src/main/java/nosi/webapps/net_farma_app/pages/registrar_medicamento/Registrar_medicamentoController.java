@@ -4,25 +4,24 @@ import nosi.core.webapp.Controller;//
 import java.io.IOException;//
 import nosi.core.webapp.Core;//
 import nosi.core.webapp.Response;//
-import nosi.webapps.net_farma_app.helper.Registrar_medicamentoHelper;
 /* Start-Code-Block (import) */
 /* End-Code-Block */
 /*----#start-code(packages_import)----*/
-
-
+import nosi.webapps.net_farma_app.helper.Registrar_medicamentoHelper;
 /*----#end-code----*/
 		
 public class Registrar_medicamentoController extends Controller {
 	public Response actionIndex() throws IOException, IllegalArgumentException, IllegalAccessException{
 		var model = new Registrar_medicamento();
 		model.load();
+		 //model.setLink_upload_img(this.getConfig().getResolveUrl("igrp","file","save-image-txt&p_page_name="+Core.getCurrentPage()));
 		var view = new Registrar_medicamentoView();
 		view.receita.loadDomain("Receita","net_farma_app","-- Selecionar --");
 		view.tipo_de_produto.loadDomain("Tipo de Produto","net_farma_app","-- Selecionar --");
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadSeparatorlist_registrar(Core.query(null,"SELECT 'Lorem sit deserunt ipsum sit' as nome_medicamento,'Stract totam officia sed adipiscing accusantium adipiscing sit unde ut labore anim unde amet ipsum' as descricao_do_produto,'Unde labore perspiciatis natus elit' as preco_do_produto,'' as image,'2' as receita,'Laudantium voluptatem unde stract rem' as estoque,'2' as tipo_de_produto "));
+		model.loadSeparatorlist_registrar(Core.query(null,"SELECT 'Dolor sit consectetur dolor doloremque' as nome_medicamento,'Anim elit deserunt sed doloremque unde rem consectetur sed lorem doloremque amet officia labore elit ipsum lorem ut voluptatem anim' as descricao_do_produto,'Omnis deserunt voluptatem accusantium voluptatem' as preco_do_produto,'' as image,'2' as receita,'Magna sit elit sit iste' as estoque,'2' as tipo_de_produto "));
 		  ----#gen-example */
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/

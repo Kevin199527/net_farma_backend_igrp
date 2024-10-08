@@ -6,7 +6,6 @@ import nosi.core.webapp.RParam;
 import nosi.core.webapp.databse.helpers.BaseQueryInterface;
 import java.util.ArrayList;
 import java.util.List;
-import nosi.core.gui.components.IGRPChart2D;
 import nosi.core.gui.components.IGRPChart3D;
 
 public class Pagina_dashboard extends Model{		
@@ -421,6 +420,7 @@ public class Pagina_dashboard extends Model{
 	public static class Table_dados_de_venda extends IGRPTable.Table{
 		private String estado;
 		private String nome_de_produto;
+		private String nome_de_produto_1;
 		private String tipo_de_produto;
 		private String quantidade;
 		private String preco_unitario;
@@ -439,6 +439,13 @@ public class Pagina_dashboard extends Model{
 		}
 		public String getNome_de_produto(){
 			return this.nome_de_produto;
+		}
+
+		public void setNome_de_produto_1(String nome_de_produto_1){
+			this.nome_de_produto_1 = nome_de_produto_1;
+		}
+		public String getNome_de_produto_1(){
+			return this.nome_de_produto_1;
 		}
 
 		public void setTipo_de_produto(String tipo_de_produto){
@@ -491,9 +498,9 @@ public class Pagina_dashboard extends Model{
 		public Chart_3() {
 		}
 	}
-	public static class Chart_2 extends IGRPChart2D{
-		public Chart_2(String eixoX, Object eixoY) {
-			super(eixoX, eixoY);
+	public static class Chart_2 extends IGRPChart3D{
+		public Chart_2(String eixoX, String eixoY, Object eixoZ) {
+			super(eixoX, eixoY,eixoZ);
 		}
 		public Chart_2() {
 		}

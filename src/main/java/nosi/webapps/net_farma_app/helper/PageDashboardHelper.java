@@ -28,10 +28,12 @@ public class PageDashboardHelper extends IgrpPageHelper<Pagina_dashboard, Pagina
         view.chart_1.loadQuery(Core.query(Core.defaultConnection(),
                 "SELECT nome as EixoX, Nome as EixoY, estoques as EixoZ FROM tbl_medicamentos"));
 
-        view.chart_2.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
-                +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
-                +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
-                +" UNION SELECT 'X3' as EixoX, 'Y3' as EixoY, 40 as EixoZ"));
+
+        view.chart_2.loadQuery(Core.query(Core.defaultConnection(),
+                "SELECT produto_entrege as EixoY, nome_fornecedor as EixoX, SUM(quantidade) as EixoZ "
+                        + "FROM fornecedores "
+                        + "GROUP BY nome_fornecedor, produto_entrege "
+                        + "ORDER BY EixoX"));
 
         view.chart_3.loadQuery(Core.query(Core.defaultConnection(),
                 "SELECT tipo_produto as EixoX, EXTRACT(YEAR FROM data_venda) as EixoY, SUM(quantidade) as EixoZ "
@@ -62,9 +64,10 @@ public class PageDashboardHelper extends IgrpPageHelper<Pagina_dashboard, Pagina
                 t.setData_de_venda(v.getDataVenda().toString());
                 t.setMetodo_de_pagamento(v.getMetodoPagamento());
                 t.setValor_total_pago(v.getValorTotal().toString());
-
+                t.setEstado(v.getStatus());
                 tabelaDadosVenda.add(t);
             }
+
             model.setTable_dados_de_venda(tabelaDadosVenda);
         }else{
             Core.setMessageError("No Data Found!");

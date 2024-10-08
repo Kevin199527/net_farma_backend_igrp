@@ -56,7 +56,7 @@ public class Pagina_dashboardController extends Controller {
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadTable_dados_de_venda(Core.query(null,"SELECT '2' as estado,'Ut elit consectetur aliqua nat' as nome_de_produto,'Ipsum ut officia omnis volupta' as tipo_de_produto,'Sit magna accusantium ut elit' as quantidade,'Anim dolor unde consectetur de' as preco_unitario,'Deserunt lorem perspiciatis un' as data_de_venda,'Lorem ut aperiam natus laudant' as metodo_de_pagamento,'Ipsum anim ut voluptatem dolor' as valor_total_pago "));
+		model.loadTable_dados_de_venda(Core.query(null,"SELECT 'Consectetur anim adipiscing de' as estado,'Perspiciatis ipsum dolor omnis' as nome_de_produto,'Amet mollit anim voluptatem la' as nome_de_produto_1,'Sed iste anim perspiciatis ali' as tipo_de_produto,'Deserunt unde elit sed sit' as quantidade,'Ipsum rem adipiscing sed adipi' as preco_unitario,'Magna totam amet sit sit' as data_de_venda,'Natus aliqua elit anim aperiam' as metodo_de_pagamento,'Elit ut stract rem anim' as valor_total_pago "));
 		view.chart_3.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
@@ -133,24 +133,6 @@ public class Pagina_dashboardController extends Controller {
 		  ----#gen-example */
 		/* Start-Code-Block (dashboard)  *//* End-Code-Block  */
 		/*----#start-code(dashboard)----*/
-		
-		
-		/*----#end-code----*/
-		return this.redirect("net_farma_app","Pagina_dashboard","index", this.queryString());	
-	}
-	
-	public Response actionToolsbar_1_button_1() throws IOException, IllegalArgumentException, IllegalAccessException{
-		var model = new Pagina_dashboard();
-		model.load();
-		/*----#gen-example
-		  EXAMPLES COPY/PASTE:
-		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		  this.addQueryString("p_id","12"); //to send a query string in the URL
-		  return this.forward("net_farma_app","Pagina_dashboard","index",this.queryString()); //if submit, loads the values
-		  Use model.validate() to validate your model
-		  ----#gen-example */
-		/* Start-Code-Block (toolsbar_1_button_1)  *//* End-Code-Block  */
-		/*----#start-code(toolsbar_1_button_1)----*/
 		
 		
 		/*----#end-code----*/

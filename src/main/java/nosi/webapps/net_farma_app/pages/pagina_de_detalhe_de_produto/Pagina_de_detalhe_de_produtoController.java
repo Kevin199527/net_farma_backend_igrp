@@ -14,6 +14,7 @@ public class Pagina_de_detalhe_de_produtoController extends Controller {
 	public Response actionIndex() throws IOException, IllegalArgumentException, IllegalAccessException{
 		var model = new Pagina_de_detalhe_de_produto();
 		model.load();
+		 //model.setLink_upload_img(this.getConfig().getResolveUrl("igrp","file","save-image-txt&p_page_name="+Core.getCurrentPage()));
 		var view = new Pagina_de_detalhe_de_produtoView();
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/
