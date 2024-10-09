@@ -9,6 +9,18 @@ import java.util.List;
 
 public class Paginalistarproduto extends Model{		
 
+	@RParam(rParamName = "p_sectionheader_2_text")
+	private String sectionheader_2_text;
+
+	@RParam(rParamName = "p_nome_filter")
+	private String nome_filter;
+
+	@RParam(rParamName = "p_tipo_de_produto_filtro")
+	private String tipo_de_produto_filtro;
+
+	@RParam(rParamName = "p_receita_filter")
+	private String receita_filter;
+
 	@RParam(rParamName = "p_sectionheader_1_text")
 	private String sectionheader_1_text;
 	
@@ -20,6 +32,34 @@ public class Paginalistarproduto extends Model{
 		return this.tabela_de_produto;
 	}
 
+	
+	public void setSectionheader_2_text(String sectionheader_2_text){
+		this.sectionheader_2_text = sectionheader_2_text;
+	}
+	public String getSectionheader_2_text(){
+		return this.sectionheader_2_text;
+	}
+	
+	public void setNome_filter(String nome_filter){
+		this.nome_filter = nome_filter;
+	}
+	public String getNome_filter(){
+		return this.nome_filter;
+	}
+	
+	public void setTipo_de_produto_filtro(String tipo_de_produto_filtro){
+		this.tipo_de_produto_filtro = tipo_de_produto_filtro;
+	}
+	public String getTipo_de_produto_filtro(){
+		return this.tipo_de_produto_filtro;
+	}
+	
+	public void setReceita_filter(String receita_filter){
+		this.receita_filter = receita_filter;
+	}
+	public String getReceita_filter(){
+		return this.receita_filter;
+	}
 	
 	public void setSectionheader_1_text(String sectionheader_1_text){
 		this.sectionheader_1_text = sectionheader_1_text;

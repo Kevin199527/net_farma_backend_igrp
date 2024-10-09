@@ -5,6 +5,8 @@ import nosi.core.webapp.View;
 import nosi.core.gui.components.*;
 import nosi.core.gui.fields.*;
 import static nosi.core.i18n.Translator.gt;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class Pagina_dashboardView extends View {
 
@@ -45,6 +47,10 @@ public class Pagina_dashboardView extends View {
 	public Field circlestatbox_4_desc;
 	public Field circlestatbox_4_url;
 	public Field circlestatbox_4_bg;
+	public Field nome_do_produto;
+	public Field status_1;
+	public Field data_de;
+	public Field data_ate;
 	public Field estado;
 	public Field nome_de_produto;
 	public Field nome_de_produto_1;
@@ -64,12 +70,14 @@ public class Pagina_dashboardView extends View {
 	public IGRPChart chart_3;
 	public IGRPChart chart_2;
 	public IGRPChart chart_1;
+	public IGRPForm form_filtro;
 	public IGRPTable table_dados_de_venda;
 
 	public IGRPToolsBar toolsbar_1;
 	public IGRPButton btn_registrar_produtos;
 	public IGRPButton btn_listar_produtos;
 	public IGRPButton btn_dashboard;
+	public IGRPButton btn_pesquisar;
 
 	public Pagina_dashboardView(){
 
@@ -94,6 +102,8 @@ public class Pagina_dashboardView extends View {
 		chart_2 = new IGRPChart("chart_2","Quantidade de Produtos Entregues por Fornecedor");
 
 		chart_1 = new IGRPChart("chart_1","Estoque do Produtos");
+
+		form_filtro = new IGRPForm("form_filtro","Filtro");
 
 		table_dados_de_venda = new IGRPTable("table_dados_de_venda","Dados de Venda");
 
@@ -246,9 +256,25 @@ public class Pagina_dashboardView extends View {
 		circlestatbox_4_bg.setLabel(gt("Background"));
 		circlestatbox_4_bg.propertie().add("name","p_circlestatbox_4_bg").add("type","text").add("maxlength","4000");
 		
-		estado = new TextField(model,"estado");
+		nome_do_produto = new TextField(model,"nome_do_produto");
+		nome_do_produto.setLabel(gt("Nome do Produto"));
+		nome_do_produto.propertie().add("name","p_nome_do_produto").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
+		
+		status_1 = new ListField(model,"status_1");
+		status_1.setLabel(gt("Status"));
+		status_1.propertie().add("name","p_status_1").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Status « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("tooltip","false").add("disable_copy_paste","false");
+		
+		data_de = new DateField(model,"data_de");
+		data_de.setLabel(gt("Data de:"));
+		data_de.propertie().add("name","p_data_de").add("type","date").add("range","false").add("disableWeekends","false").add("disabledBeforetoday","false").add("daysoff","false").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false").add("class","success");
+		
+		data_ate = new DateField(model,"data_ate");
+		data_ate.setLabel(gt("Data ate:"));
+		data_ate.propertie().add("name","p_data_ate").add("type","date").add("range","false").add("disableWeekends","false").add("disabledBeforetoday","false").add("daysoff","false").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false").add("class","danger");
+		
+		estado = new ColorField(model,"estado");
 		estado.setLabel(gt("Estado"));
-		estado.propertie().add("name","p_estado").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		estado.propertie().add("name","p_estado").add("type","color").add("maxlength","30").add("showLabel","true").add("group_in","");
 		
 		nome_de_produto = new TextField(model,"nome_de_produto");
 		nome_de_produto.setLabel(gt("Nome de Produto"));
@@ -294,27 +320,30 @@ public class Pagina_dashboardView extends View {
 		btn_dashboard = new IGRPButton("Dashboard","net_farma_app","Pagina_dashboard","dashboard","_self","grey|fa-dashboard","","");
 		btn_dashboard.propertie.add("type","specific").add("rel","dashboard").add("refresh_components","");
 
+		btn_pesquisar = new IGRPButton("Pesquisar","net_farma_app","Pagina_dashboard","pesquisar","submit_ajax","success|fa-search","","");
+		btn_pesquisar.propertie.add("id","button_3acb_1fef").add("type","form").add("class","success").add("rel","pesquisar").add("refresh_components","table_dados_de_venda");
+
 		
 		chart_3.setCaption("");
 		chart_3.setChart_type("line");
 		chart_3.setXaxys("Eixo de X");
 		chart_3.setYaxys("Eixo de Y");
 		chart_3.setUrl("#");
-		//ex: chart_3.addColor("#cd33c9").addColor("#0be277").addColor("#8dd21b").addColor("#32364d");
+		//ex: chart_3.addColor("#170d4f").addColor("#6b1593").addColor("#ad62bf").addColor("#e04cb5");
 
 		chart_2.setCaption("");
 		chart_2.setChart_type("treemap");
 		chart_2.setXaxys("Eixo de X");
 		chart_2.setYaxys("Eixo de Y");
 		chart_2.setUrl("#");
-		//ex: chart_2.addColor("#5bc22c").addColor("#5b8fcf").addColor("#9b4eaa").addColor("#619d0d");
+		//ex: chart_2.addColor("#aad692").addColor("#33ed12").addColor("#745ff5").addColor("#554af0");
 
 		chart_1.setCaption("");
 		chart_1.setChart_type("area");
 		chart_1.setXaxys("Eixo de X");
 		chart_1.setYaxys("Eixo de Y");
 		chart_1.setUrl("#");
-		//ex: chart_1.addColor("#e171b2").addColor("#fd9b48").addColor("#04ea69").addColor("#4e9fa8");
+		//ex: chart_1.addColor("#b85eed").addColor("#e5fe7b").addColor("#2035c2").addColor("#33395f");
 
 	}
 		
@@ -369,6 +398,11 @@ public class Pagina_dashboardView extends View {
 
 
 
+		form_filtro.addField(nome_do_produto);
+		form_filtro.addField(status_1);
+		form_filtro.addField(data_de);
+		form_filtro.addField(data_ate);
+
 		table_dados_de_venda.addField(estado);
 		table_dados_de_venda.addField(nome_de_produto);
 		table_dados_de_venda.addField(nome_de_produto_1);
@@ -378,10 +412,23 @@ public class Pagina_dashboardView extends View {
 		table_dados_de_venda.addField(data_de_venda);
 		table_dados_de_venda.addField(metodo_de_pagamento);
 		table_dados_de_venda.addField(valor_total_pago);
-
+		/* start table_dados_de_venda legend colors*/
+		Map<Object, Map<String, String>> table_dados_de_venda_colors= new LinkedHashMap<>();
+		Map<String, String> color_dc2b4c_table_dados_de_venda = new LinkedHashMap<>();
+		color_dc2b4c_table_dados_de_venda.put("#dc2b4c","cancelado");
+		table_dados_de_venda_colors.put("cancelada",color_dc2b4c_table_dados_de_venda);
+		Map<String, String> color_ea9126_table_dados_de_venda = new LinkedHashMap<>();
+		color_ea9126_table_dados_de_venda.put("#ea9126","pendente");
+		table_dados_de_venda_colors.put("pendente",color_ea9126_table_dados_de_venda);
+		Map<String, String> color_95c11f_table_dados_de_venda = new LinkedHashMap<>();
+		color_95c11f_table_dados_de_venda.put("#95c11f","concluida");
+		table_dados_de_venda_colors.put("concluída",color_95c11f_table_dados_de_venda);
+		this.table_dados_de_venda.setLegendColors(table_dados_de_venda_colors);
+		/* end table_dados_de_venda legend colors*/
 		toolsbar_1.addButton(btn_registrar_produtos);
 		toolsbar_1.addButton(btn_listar_produtos);
 		toolsbar_1.addButton(btn_dashboard);
+		form_filtro.addButton(btn_pesquisar);
 		this.addToPage(sectionheader_1);
 		this.addToPage(circlestatbox_produto);
 		this.addToPage(circlestatbox_estoque);
@@ -392,6 +439,7 @@ public class Pagina_dashboardView extends View {
 		this.addToPage(chart_3);
 		this.addToPage(chart_2);
 		this.addToPage(chart_1);
+		this.addToPage(form_filtro);
 		this.addToPage(table_dados_de_venda);
 		this.addToPage(toolsbar_1);
 	}
@@ -435,6 +483,10 @@ public class Pagina_dashboardView extends View {
 		circlestatbox_4_desc.setValue(model);
 		circlestatbox_4_url.setValue(model);
 		circlestatbox_4_bg.setValue(model);
+		nome_do_produto.setValue(model);
+		status_1.setValue(model);
+		data_de.setValue(model);
+		data_ate.setValue(model);
 		estado.setValue(model);
 		nome_de_produto.setValue(model);
 		nome_de_produto_1.setValue(model);

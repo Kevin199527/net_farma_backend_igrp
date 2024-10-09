@@ -53,10 +53,11 @@ public class Pagina_dashboardController extends Controller {
 		model.setCirclestatbox_4_url("http://www.example.com");
 		model.setCirclestatbox_4_bg("cp-stylish");
 		var view = new Pagina_dashboardView();
+		view.status_1.loadDomain("Status","net_farma_app","-- Selecionar --");
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadTable_dados_de_venda(Core.query(null,"SELECT 'Consectetur anim adipiscing de' as estado,'Perspiciatis ipsum dolor omnis' as nome_de_produto,'Amet mollit anim voluptatem la' as nome_de_produto_1,'Sed iste anim perspiciatis ali' as tipo_de_produto,'Deserunt unde elit sed sit' as quantidade,'Ipsum rem adipiscing sed adipi' as preco_unitario,'Magna totam amet sit sit' as data_de_venda,'Natus aliqua elit anim aperiam' as metodo_de_pagamento,'Elit ut stract rem anim' as valor_total_pago "));
+		model.loadTable_dados_de_venda(Core.query(null,"SELECT 'cancelada' as estado,'Ipsum natus sit ut officia' as nome_de_produto,'Voluptatem aperiam sed laudant' as nome_de_produto_1,'Accusantium adipiscing anim vo' as tipo_de_produto,'Mollit officia deserunt ut und' as quantidade,'Dolor ipsum labore lorem persp' as preco_unitario,'Adipiscing accusantium sed acc' as data_de_venda,'Doloremque aperiam voluptatem' as metodo_de_pagamento,'Totam labore elit stract lorem' as valor_total_pago "));
 		view.chart_3.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
@@ -137,6 +138,24 @@ public class Pagina_dashboardController extends Controller {
 		
 		/*----#end-code----*/
 		return this.redirect("net_farma_app","Pagina_dashboard","index", this.queryString());	
+	}
+	
+	public Response actionPesquisar() throws IOException, IllegalArgumentException, IllegalAccessException{
+		var model = new Pagina_dashboard();
+		model.load();
+		/*----#gen-example
+		  EXAMPLES COPY/PASTE:
+		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
+		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
+		  Use model.validate() to validate your model
+		  ----#gen-example */
+		/* Start-Code-Block (pesquisar)  *//* End-Code-Block  */
+		/*----#start-code(pesquisar)----*/
+		
+		return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString());
+		/*----#end-code----*/
+			
 	}
 	/* Start-Code-Block (custom-actions)  *//* End-Code-Block  */
 /*----#start-code(custom_actions)----*/

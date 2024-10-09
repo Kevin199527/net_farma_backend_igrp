@@ -66,6 +66,54 @@
                 <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_dashboard/Pagina_dashboard.xml</preview>
             </item>
         </toolsbar_1>
+        <sectionheader_2 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_2_text type="text" name="p_sectionheader_2_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Filtrar Produtos</span></strong></span></p>
+]]>
+                    </value>
+                </sectionheader_2_text>
+            </fields>
+        </sectionheader_2>
+        <form_1 type="form" xml-type="form" title="Filtro" gen-type="container" gen-group="">
+            <fields>
+                <nome_filter name="p_nome_filter" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="Filtre por Nome do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Nome</label>
+                    <value>Deserunt doloremque lorem sed magna</value>
+                </nome_filter>
+                <tipo_de_produto_filtro name="p_tipo_de_produto_filtro" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="Filtre por Tipo de Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Tipo de Produto</label>
+                    <value>Aperiam amet consectetur natus anim</value>
+                </tipo_de_produto_filtro>
+                <receita_filter name="p_receita_filter" type="select" multiple="false" tags="false" load_service_data="false" domain="Receita « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Receita</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Sim</text>
+                            <value>Sim</value>
+                        </option>
+                        <option>
+                            <text>Não</text>
+                            <value>Não</value>
+                        </option>
+                    </list>
+                </receita_filter>
+            </fields>
+            <tools-bar>
+                <item id="button_0bd7_2db5" type="form" code="" class="success" rel="pesquisar" custom_return="true" refresh_components="">
+                    <title>Pesquisar</title>
+                    <app>net_farma_app</app>
+                    <page>Pagina_de_detalhe_de_produto</page>
+                    <link>index</link>
+                    <parameter>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml?</parameter>
+                    <target>submit_ajax</target>
+                    <img>success|fa-search</img>
+                    <preview>../images/IGRP/IGRP2.3/app/net_farma_app/pagina_de_detalhe_de_produto/Pagina_de_detalhe_de_produto.xml</preview>
+                </item>
+            </tools-bar>
+        </form_1>
         <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
             <fields>
                 <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
@@ -82,9 +130,9 @@
                     <label>Imagem</label>
                 </imagem>
                 <nome_do_produto name="p_nome_do_produto" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
-                    <label>Nome do Produto</label>
+                    <label>Produto</label>
                 </nome_do_produto>
-                <descricao name="p_descricao" type="textarea" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                <descricao name="p_descricao" type="textarea" maxlength="30000" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
                     <label>Descrição</label>
                 </descricao>
                 <preco name="p_preco" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
@@ -106,12 +154,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Accusantium unde rem deserunt</nome_do_produto>
-                        <descricao name="p_descricao">Iste perspiciatis lorem labore</descricao>
-                        <preco name="p_preco">Laudantium sit magna amet aper</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Anim unde dolor perspiciatis n</tipo_de_produto>
-                        <receita name="p_receita">Voluptatem aperiam totam sit v</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-a2da_a2cd</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Perspiciatis deserunt consecte</nome_do_produto>
+                        <descricao name="p_descricao">Accusantium officia laudantium adipiscing sit unde rem officia laudantium totam aliqua stract lorem amet mollit</descricao>
+                        <preco name="p_preco">Deserunt amet laudantium magna</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Officia sit elit doloremque pe</tipo_de_produto>
+                        <receita name="p_receita">Iste consectetur omnis elit ad</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-6edb_17be</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -119,12 +167,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Natus stract adipiscing aperia</nome_do_produto>
-                        <descricao name="p_descricao">Ipsum adipiscing aliqua laudan</descricao>
-                        <preco name="p_preco">Sit sit unde sit stract</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Aliqua sed omnis ipsum sit</tipo_de_produto>
-                        <receita name="p_receita">Amet sit ut ipsum unde</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-b4b9_5493</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Doloremque stract officia unde</nome_do_produto>
+                        <descricao name="p_descricao">Voluptatem deserunt aliqua laudantium rem consectetur sit mollit totam adipiscing magna sit anim rem stract</descricao>
+                        <preco name="p_preco">Aliqua elit mollit sit totam</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Perspiciatis adipiscing natus</tipo_de_produto>
+                        <receita name="p_receita">Iste officia sed labore iste</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-8157_9f31</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -132,12 +180,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Unde lorem natus deserunt magn</nome_do_produto>
-                        <descricao name="p_descricao">Rem elit unde laudantium anim</descricao>
-                        <preco name="p_preco">Omnis perspiciatis magna lauda</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Lorem doloremque anim magna mo</tipo_de_produto>
-                        <receita name="p_receita">Iste lorem aliqua omnis laudan</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-0253_334e</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Consectetur anim aliqua aperia</nome_do_produto>
+                        <descricao name="p_descricao">Perspiciatis totam lorem omnis amet iste deserunt doloremque accusantium perspiciatis dolor voluptatem dolor doloremque perspiciatis</descricao>
+                        <preco name="p_preco">Labore perspiciatis iste dolor</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Accusantium magna iste magna u</tipo_de_produto>
+                        <receita name="p_receita">Dolor sit deserunt lorem anim</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-f06c_a74e</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -145,12 +193,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Elit aperiam amet anim elit</nome_do_produto>
-                        <descricao name="p_descricao">Doloremque iste ut sit sit ali</descricao>
-                        <preco name="p_preco">Iste rem anim aliqua adipiscin</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Natus magna elit deserunt sit</tipo_de_produto>
-                        <receita name="p_receita">Sit rem stract lorem unde</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-d515_aab6</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Aliqua natus voluptatem deseru</nome_do_produto>
+                        <descricao name="p_descricao">Totam stract rem deserunt doloremque aliqua magna sed natus ut anim aperiam dolor anim rem</descricao>
+                        <preco name="p_preco">Totam rem sit mollit anim</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Ipsum aperiam amet elit sit</tipo_de_produto>
+                        <receita name="p_receita">Accusantium deserunt stract na</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-cdbe_38f9</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -158,12 +206,12 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Mollit ipsum sit stract totam</nome_do_produto>
-                        <descricao name="p_descricao">Natus stract amet elit labore</descricao>
-                        <preco name="p_preco">Natus amet consectetur deserun</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Anim voluptatem ipsum labore a</tipo_de_produto>
-                        <receita name="p_receita">Lorem dolor deserunt totam con</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-4877_638a</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Aliqua elit mollit anim aliqua</nome_do_produto>
+                        <descricao name="p_descricao">Labore aperiam lorem doloremque sit adipiscing omnis elit natus aliqua natus anim officia perspiciatis natus</descricao>
+                        <preco name="p_preco">Sed iste sed voluptatem omnis</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Doloremque amet totam iste dol</tipo_de_produto>
+                        <receita name="p_receita">Accusantium dolor adipiscing d</receita>
+                        <id_list name="p_id_list" tag="id_list">hidden-7f4c_71d8</id_list>
                     </row>
                 </value>
                 <context-menu>

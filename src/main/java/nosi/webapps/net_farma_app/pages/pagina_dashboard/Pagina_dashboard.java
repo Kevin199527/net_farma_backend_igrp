@@ -120,6 +120,18 @@ public class Pagina_dashboard extends Model{
 
 	@RParam(rParamName = "p_circlestatbox_4_bg")
 	private String circlestatbox_4_bg;
+
+	@RParam(rParamName = "p_nome_do_produto")
+	private String nome_do_produto;
+
+	@RParam(rParamName = "p_status_1")
+	private String status_1;
+
+	@RParam(rParamName = "p_data_de")
+	private String data_de;
+
+	@RParam(rParamName = "p_data_ate")
+	private String data_ate;
 	
 	private List<Chart_3> chart_3 = new ArrayList<>();	
 	public void setChart_3(List<Chart_3> chart_3){
@@ -414,6 +426,34 @@ public class Pagina_dashboard extends Model{
 	}
 	public String getCirclestatbox_4_bg(){
 		return this.circlestatbox_4_bg;
+	}
+	
+	public void setNome_do_produto(String nome_do_produto){
+		this.nome_do_produto = nome_do_produto;
+	}
+	public String getNome_do_produto(){
+		return this.nome_do_produto;
+	}
+	
+	public void setStatus_1(String status_1){
+		this.status_1 = status_1;
+	}
+	public String getStatus_1(){
+		return this.status_1;
+	}
+	
+	public void setData_de(String data_de){
+		this.data_de = data_de;
+	}
+	public String getData_de(){
+		return this.data_de;
+	}
+	
+	public void setData_ate(String data_ate){
+		this.data_ate = data_ate;
+	}
+	public String getData_ate(){
+		return this.data_ate;
 	}
 
 

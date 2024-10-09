@@ -25,9 +25,13 @@ public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, Pa
     }
 
     public void listarProdutos(){
-
-        List<TblMedicamentos> lista_de_produto = new TblMedicamentos().all();
+        List<TblMedicamentos> lista_de_produto = new TblMedicamentos().find()
+                .andWhere("nome", "LIKE", Core.isNotNull(model.getNome_filter()) ? "%" + model.getNome_filter() + "%" : null)
+                .andWhere("tipoDeProduto", "LIKE", Core.isNotNull(model.getTipo_de_produto_filtro()) ?  "%" + model.getTipo_de_produto_filtro() + "%" : null)
+                .andWhere("receita", "=", Core.isNotNull(model.getReceita_filter()) ? model.getReceita_filter() : null)
+                .all();
         if (lista_de_produto != null){
+
             List<Paginalistarproduto.Tabela_de_produto> tabelaDeProdutos = new ArrayList<Paginalistarproduto.Tabela_de_produto>();
 
             for (TblMedicamentos t : lista_de_produto){
@@ -47,7 +51,6 @@ public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, Pa
         }else{
             Core.setMessageInfo("No Data Found");
         }
-
     }
 
     public void eliminarProd(){
