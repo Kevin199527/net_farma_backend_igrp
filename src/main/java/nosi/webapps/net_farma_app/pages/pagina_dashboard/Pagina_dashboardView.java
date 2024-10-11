@@ -49,8 +49,8 @@ public class Pagina_dashboardView extends View {
 	public Field circlestatbox_4_bg;
 	public Field nome_do_produto;
 	public Field status_1;
-	public Field data_de;
-	public Field data_ate;
+	public Field tipo_de_produto_filtro;
+	public Field metodo_de_pagamento_filter;
 	public Field estado;
 	public Field nome_de_produto;
 	public Field nome_de_produto_1;
@@ -264,13 +264,13 @@ public class Pagina_dashboardView extends View {
 		status_1.setLabel(gt("Status"));
 		status_1.propertie().add("name","p_status_1").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Status « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("tooltip","false").add("disable_copy_paste","false");
 		
-		data_de = new DateField(model,"data_de");
-		data_de.setLabel(gt("Data de:"));
-		data_de.propertie().add("name","p_data_de").add("type","date").add("range","false").add("disableWeekends","false").add("disabledBeforetoday","false").add("daysoff","false").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false").add("class","success");
+		tipo_de_produto_filtro = new ListField(model,"tipo_de_produto_filtro");
+		tipo_de_produto_filtro.setLabel(gt("Tipo de Produto"));
+		tipo_de_produto_filtro.propertie().add("name","p_tipo_de_produto_filtro").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Tipo de Produto « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("tooltip","false").add("disable_copy_paste","false");
 		
-		data_ate = new DateField(model,"data_ate");
-		data_ate.setLabel(gt("Data ate:"));
-		data_ate.propertie().add("name","p_data_ate").add("type","date").add("range","false").add("disableWeekends","false").add("disabledBeforetoday","false").add("daysoff","false").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false").add("class","danger");
+		metodo_de_pagamento_filter = new TextField(model,"metodo_de_pagamento_filter");
+		metodo_de_pagamento_filter.setLabel(gt("Metodo de Pagamento"));
+		metodo_de_pagamento_filter.propertie().add("name","p_metodo_de_pagamento_filter").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
 		
 		estado = new ColorField(model,"estado");
 		estado.setLabel(gt("Estado"));
@@ -329,21 +329,21 @@ public class Pagina_dashboardView extends View {
 		chart_3.setXaxys("Eixo de X");
 		chart_3.setYaxys("Eixo de Y");
 		chart_3.setUrl("#");
-		//ex: chart_3.addColor("#170d4f").addColor("#6b1593").addColor("#ad62bf").addColor("#e04cb5");
+		//ex: chart_3.addColor("#f67b7e").addColor("#4b2236").addColor("#e4afe8").addColor("#fbfb53");
 
 		chart_2.setCaption("");
 		chart_2.setChart_type("treemap");
 		chart_2.setXaxys("Eixo de X");
 		chart_2.setYaxys("Eixo de Y");
 		chart_2.setUrl("#");
-		//ex: chart_2.addColor("#aad692").addColor("#33ed12").addColor("#745ff5").addColor("#554af0");
+		//ex: chart_2.addColor("#3d1a67").addColor("#78fc58").addColor("#ea3bfd").addColor("#07fabb");
 
 		chart_1.setCaption("");
 		chart_1.setChart_type("area");
 		chart_1.setXaxys("Eixo de X");
 		chart_1.setYaxys("Eixo de Y");
 		chart_1.setUrl("#");
-		//ex: chart_1.addColor("#b85eed").addColor("#e5fe7b").addColor("#2035c2").addColor("#33395f");
+		//ex: chart_1.addColor("#7705c5").addColor("#9b6c7d").addColor("#5370d1").addColor("#410c99");
 
 	}
 		
@@ -400,8 +400,8 @@ public class Pagina_dashboardView extends View {
 
 		form_filtro.addField(nome_do_produto);
 		form_filtro.addField(status_1);
-		form_filtro.addField(data_de);
-		form_filtro.addField(data_ate);
+		form_filtro.addField(tipo_de_produto_filtro);
+		form_filtro.addField(metodo_de_pagamento_filter);
 
 		table_dados_de_venda.addField(estado);
 		table_dados_de_venda.addField(nome_de_produto);
@@ -415,13 +415,13 @@ public class Pagina_dashboardView extends View {
 		/* start table_dados_de_venda legend colors*/
 		Map<Object, Map<String, String>> table_dados_de_venda_colors= new LinkedHashMap<>();
 		Map<String, String> color_dc2b4c_table_dados_de_venda = new LinkedHashMap<>();
-		color_dc2b4c_table_dados_de_venda.put("#dc2b4c","cancelado");
+		color_dc2b4c_table_dados_de_venda.put("#dc2b4c","Cancelado");
 		table_dados_de_venda_colors.put("cancelada",color_dc2b4c_table_dados_de_venda);
 		Map<String, String> color_ea9126_table_dados_de_venda = new LinkedHashMap<>();
-		color_ea9126_table_dados_de_venda.put("#ea9126","pendente");
+		color_ea9126_table_dados_de_venda.put("#ea9126","Pendente");
 		table_dados_de_venda_colors.put("pendente",color_ea9126_table_dados_de_venda);
 		Map<String, String> color_95c11f_table_dados_de_venda = new LinkedHashMap<>();
-		color_95c11f_table_dados_de_venda.put("#95c11f","concluida");
+		color_95c11f_table_dados_de_venda.put("#95c11f","Concluida");
 		table_dados_de_venda_colors.put("concluída",color_95c11f_table_dados_de_venda);
 		this.table_dados_de_venda.setLegendColors(table_dados_de_venda_colors);
 		/* end table_dados_de_venda legend colors*/
@@ -485,8 +485,8 @@ public class Pagina_dashboardView extends View {
 		circlestatbox_4_bg.setValue(model);
 		nome_do_produto.setValue(model);
 		status_1.setValue(model);
-		data_de.setValue(model);
-		data_ate.setValue(model);
+		tipo_de_produto_filtro.setValue(model);
+		metodo_de_pagamento_filter.setValue(model);
 		estado.setValue(model);
 		nome_de_produto.setValue(model);
 		nome_de_produto_1.setValue(model);

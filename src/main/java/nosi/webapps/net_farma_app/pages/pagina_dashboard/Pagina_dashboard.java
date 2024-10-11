@@ -127,11 +127,11 @@ public class Pagina_dashboard extends Model{
 	@RParam(rParamName = "p_status_1")
 	private String status_1;
 
-	@RParam(rParamName = "p_data_de")
-	private String data_de;
+	@RParam(rParamName = "p_tipo_de_produto_filtro")
+	private String tipo_de_produto_filtro;
 
-	@RParam(rParamName = "p_data_ate")
-	private String data_ate;
+	@RParam(rParamName = "p_metodo_de_pagamento_filter")
+	private String metodo_de_pagamento_filter;
 	
 	private List<Chart_3> chart_3 = new ArrayList<>();	
 	public void setChart_3(List<Chart_3> chart_3){
@@ -442,18 +442,18 @@ public class Pagina_dashboard extends Model{
 		return this.status_1;
 	}
 	
-	public void setData_de(String data_de){
-		this.data_de = data_de;
+	public void setTipo_de_produto_filtro(String tipo_de_produto_filtro){
+		this.tipo_de_produto_filtro = tipo_de_produto_filtro;
 	}
-	public String getData_de(){
-		return this.data_de;
+	public String getTipo_de_produto_filtro(){
+		return this.tipo_de_produto_filtro;
 	}
 	
-	public void setData_ate(String data_ate){
-		this.data_ate = data_ate;
+	public void setMetodo_de_pagamento_filter(String metodo_de_pagamento_filter){
+		this.metodo_de_pagamento_filter = metodo_de_pagamento_filter;
 	}
-	public String getData_ate(){
-		return this.data_ate;
+	public String getMetodo_de_pagamento_filter(){
+		return this.metodo_de_pagamento_filter;
 	}
 
 

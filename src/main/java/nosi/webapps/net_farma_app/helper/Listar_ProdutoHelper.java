@@ -27,7 +27,7 @@ public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, Pa
     public void listarProdutos(){
         List<TblMedicamentos> lista_de_produto = new TblMedicamentos().find()
                 .andWhere("nome", "LIKE", Core.isNotNull(model.getNome_filter()) ? "%" + model.getNome_filter() + "%" : null)
-                .andWhere("tipoDeProduto", "LIKE", Core.isNotNull(model.getTipo_de_produto_filtro()) ?  "%" + model.getTipo_de_produto_filtro() + "%" : null)
+                .andWhere("tipoDeProduto", "=", Core.isNotNull(model.getTipo_de_produto_filtro()) ? model.getTipo_de_produto_filtro() : null)
                 .andWhere("receita", "=", Core.isNotNull(model.getReceita_filter()) ? model.getReceita_filter() : null)
                 .all();
         if (lista_de_produto != null){
@@ -43,9 +43,15 @@ public class Listar_ProdutoHelper extends IgrpPageHelper<Paginalistarproduto, Pa
                 row.setTipo_de_produto(t.getTipoDeProduto());
                 row.setReceita(t.getReceita());
 
+                row.setAtivo(0);
+                row.setAtivo_check(1);
+
+                if (Core.toInt(t.getAtivo()) == 1){
+                    row.setAtivo(1);
+                }
+
                 tabelaDeProdutos.add(row);
             }
-
 
             model.setTabela_de_produto(tabelaDeProdutos);
         }else{

@@ -54,10 +54,11 @@ public class Pagina_dashboardController extends Controller {
 		model.setCirclestatbox_4_bg("cp-stylish");
 		var view = new Pagina_dashboardView();
 		view.status_1.loadDomain("Status","net_farma_app","-- Selecionar --");
+		view.tipo_de_produto_filtro.loadDomain("Tipo de Produto","net_farma_app","-- Selecionar --");
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadTable_dados_de_venda(Core.query(null,"SELECT 'cancelada' as estado,'Ipsum natus sit ut officia' as nome_de_produto,'Voluptatem aperiam sed laudant' as nome_de_produto_1,'Accusantium adipiscing anim vo' as tipo_de_produto,'Mollit officia deserunt ut und' as quantidade,'Dolor ipsum labore lorem persp' as preco_unitario,'Adipiscing accusantium sed acc' as data_de_venda,'Doloremque aperiam voluptatem' as metodo_de_pagamento,'Totam labore elit stract lorem' as valor_total_pago "));
+		model.loadTable_dados_de_venda(Core.query(null,"SELECT 'pendente' as estado,'Sit sit aliqua amet totam' as nome_de_produto,'Sit lorem mollit lorem omnis' as nome_de_produto_1,'Natus perspiciatis ipsum accus' as tipo_de_produto,'Amet accusantium adipiscing ac' as quantidade,'Sit voluptatem anim laudantium' as preco_unitario,'Omnis doloremque sit labore om' as data_de_venda,'Natus iste sed doloremque labo' as metodo_de_pagamento,'Natus doloremque labore ut und' as valor_total_pago "));
 		view.chart_3.loadQuery(Core.query(null,"SELECT 'X1' as EixoX, 'Y1' as EixoY, 15 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 10 as EixoZ"
                                       +" UNION SELECT 'X2' as EixoX, 'Y2' as EixoY, 23 as EixoZ"
@@ -153,7 +154,7 @@ public class Pagina_dashboardController extends Controller {
 		/* Start-Code-Block (pesquisar)  *//* End-Code-Block  */
 		/*----#start-code(pesquisar)----*/
 		
-		return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString());
+		return this.forward("net_farma_app","Pagina_dashboard","index",this.queryString());
 		/*----#end-code----*/
 			
 	}

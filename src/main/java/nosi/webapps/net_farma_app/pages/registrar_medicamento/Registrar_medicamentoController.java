@@ -21,7 +21,7 @@ public class Registrar_medicamentoController extends Controller {
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadSeparatorlist_registrar(Core.query(null,"SELECT 'Dolor sit consectetur dolor doloremque' as nome_medicamento,'Anim elit deserunt sed doloremque unde rem consectetur sed lorem doloremque amet officia labore elit ipsum lorem ut voluptatem anim' as descricao_do_produto,'Omnis deserunt voluptatem accusantium voluptatem' as preco_do_produto,'' as image,'2' as receita,'Magna sit elit sit iste' as estoque,'2' as tipo_de_produto "));
+		model.loadSeparatorlist_registrar(Core.query(null,"SELECT 'Laudantium omnis natus amet omnis' as nome_medicamento,'Rem voluptatem elit totam aperiam amet accusantium officia unde stract anim laudantium natus sed amet iste mollit accusantium officia doloremque' as descricao_do_produto,'Natus dolor laudantium rem magna' as preco_do_produto,'' as image,'2' as receita,'Omnis doloremque accusantium doloremque accusantium' as estoque,'2' as tipo_de_produto,'1' as ativo "));
 		  ----#gen-example */
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/

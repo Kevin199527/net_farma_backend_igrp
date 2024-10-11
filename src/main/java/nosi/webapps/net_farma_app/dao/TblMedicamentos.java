@@ -1,18 +1,18 @@
 package nosi.webapps.net_farma_app.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 import javax.persistence.GenerationType;
+import javax.persistence.Entity;
 import java.io.Serial;
+import javax.persistence.GeneratedValue;
+import javax.persistence.NamedQuery;
 import nosi.base.ActiveRecord.BaseActiveRecord;
-import javax.persistence.Column;
 import jakarta.validation.constraints.Size;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 /**
- * @author: Nositeste 2024-10-03
+ * @author: Nositeste 2024-10-09
  */
 
 //@XmlRootElement // Can be used for REST / XML API
@@ -50,6 +50,8 @@ public class TblMedicamentos extends BaseActiveRecord<TblMedicamentos> {
 	private String imagemUrl;
 	@Column(name = "estoques")
 	private Integer estoques;
+	@Column(name = "ativo")
+	private String ativo;
 
    public Integer getIdProduto() {
       return this.idProduto;
@@ -115,6 +117,14 @@ public class TblMedicamentos extends BaseActiveRecord<TblMedicamentos> {
       this.estoques = estoques;
    }
 
+   public String getAtivo() {
+      return this.ativo;
+   }
+
+   public void setAtivo(String ativo) {
+      this.ativo = ativo;
+   }
+
    public static final class Field {
       public static final String ID_PRODUTO = "idProduto";
       public static final String NOME = "nome";
@@ -124,6 +134,7 @@ public class TblMedicamentos extends BaseActiveRecord<TblMedicamentos> {
       public static final String RECEITA = "receita";
       public static final String IMAGEM_URL = "imagemUrl";
       public static final String ESTOQUES = "estoques";
+      public static final String ATIVO = "ativo";
 
 	  private Field() {}
 	}

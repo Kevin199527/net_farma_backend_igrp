@@ -16,6 +16,8 @@ public class Registrar_medicamentoView extends View {
 	public Field receita;
 	public Field estoque;
 	public Field tipo_de_produto;
+	public Field ativo;
+	public Field ativo_check;
 	public IGRPSectionHeader sectionheader_1;
 	public IGRPBox box_1;
 	public IGRPSeparatorList separatorlist_registrar;
@@ -70,6 +72,13 @@ public class Registrar_medicamentoView extends View {
 		tipo_de_produto.setLabel(gt("Tipo de Produto"));
 		tipo_de_produto.propertie().add("name","p_tipo_de_produto").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Tipo de Produto « net_farma_app").add("maxlength","250").add("required","true").add("disabled","false").add("java-type","").add("desc","true");
 		
+		ativo = new CheckBoxField(model,"ativo");
+		ativo.setLabel(gt("Ativo"));
+		ativo.propertie().add("name","p_ativo").add("type","checkbox").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("java-type","Integer").add("check","true").add("desc","true");
+		
+		ativo_check = new CheckBoxField(model,"ativo_check");
+		ativo_check.propertie().add("name","p_ativo").add("type","checkbox").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("java-type","Integer").add("check","true").add("desc","true");
+		
 
 		toolsbar_1 = new IGRPToolsBar("toolsbar_1");
 		toolsbar_2 = new IGRPToolsBar("toolsbar_2");
@@ -103,6 +112,8 @@ public class Registrar_medicamentoView extends View {
 		separatorlist_registrar.addField(receita);
 		separatorlist_registrar.addField(estoque);
 		separatorlist_registrar.addField(tipo_de_produto);
+		separatorlist_registrar.addField(ativo);
+		separatorlist_registrar.addField(ativo_check);
 
 
 		toolsbar_1.addButton(btn_registrar_produtos);
@@ -125,7 +136,8 @@ public class Registrar_medicamentoView extends View {
 		image.setValue(model);
 		receita.setValue(model);
 		estoque.setValue(model);
-		tipo_de_produto.setValue(model);	
+		tipo_de_produto.setValue(model);
+		ativo.setValue(model);	
 
 		separatorlist_registrar.loadModel(((Registrar_medicamento) model).getSeparatorlist_registrar());
 		}

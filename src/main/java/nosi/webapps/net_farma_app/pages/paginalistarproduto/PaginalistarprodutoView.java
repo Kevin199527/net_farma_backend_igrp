@@ -5,6 +5,7 @@ import nosi.core.webapp.View;
 import nosi.core.gui.components.*;
 import nosi.core.gui.fields.*;
 import static nosi.core.i18n.Translator.gt;
+import nosi.core.webapp.Core;
 
 public class PaginalistarprodutoView extends View {
 
@@ -19,6 +20,8 @@ public class PaginalistarprodutoView extends View {
 	public Field preco;
 	public Field tipo_de_produto;
 	public Field receita;
+	public Field ativo;
+	public Field ativo_check;
 	public Field id_list;
 	public IGRPSectionHeader sectionheader_2;
 	public IGRPForm form_1;
@@ -48,16 +51,16 @@ public class PaginalistarprodutoView extends View {
 
 		sectionheader_2_text = new TextField(model,"sectionheader_2_text");
 		sectionheader_2_text.setLabel(gt(""));
-		sectionheader_2_text.setValue(gt("<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Filtrar Produtos</span></strong></span></p>"));
+		sectionheader_2_text.setValue(gt("<p><strong><span style='font-size:36px;'>Filtrar Produtos</span></strong></p>"));
 		sectionheader_2_text.propertie().add("type","text").add("name","p_sectionheader_2_text").add("maxlength","4000");
 		
 		nome_filter = new TextField(model,"nome_filter");
 		nome_filter.setLabel(gt("Nome"));
 		nome_filter.propertie().add("name","p_nome_filter").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("Filtre por Nome do Produto")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
 		
-		tipo_de_produto_filtro = new TextField(model,"tipo_de_produto_filtro");
+		tipo_de_produto_filtro = new ListField(model,"tipo_de_produto_filtro");
 		tipo_de_produto_filtro.setLabel(gt("Tipo de Produto"));
-		tipo_de_produto_filtro.propertie().add("name","p_tipo_de_produto_filtro").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("Filtre por Tipo de Produto")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
+		tipo_de_produto_filtro.propertie().add("name","p_tipo_de_produto_filtro").add("type","select").add("multiple","false").add("tags","false").add("load_service_data","false").add("domain","Tipo de Produto « net_farma_app").add("maxlength","250").add("required","false").add("disabled","false").add("java-type","").add("tooltip","false").add("disable_copy_paste","false");
 		
 		receita_filter = new ListField(model,"receita_filter");
 		receita_filter.setLabel(gt("Receita"));
@@ -65,7 +68,7 @@ public class PaginalistarprodutoView extends View {
 		
 		sectionheader_1_text = new TextField(model,"sectionheader_1_text");
 		sectionheader_1_text.setLabel(gt(""));
-		sectionheader_1_text.setValue(gt("<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Lista de Produto</span></strong></span></p>"));
+		sectionheader_1_text.setValue(gt("<p><strong><span style='font-size:36px;'>Lista de Produto</span></strong></p>"));
 		sectionheader_1_text.propertie().add("type","text").add("name","p_sectionheader_1_text").add("maxlength","4000");
 		
 		imagem = new TextField(model,"imagem");
@@ -92,6 +95,13 @@ public class PaginalistarprodutoView extends View {
 		receita = new TextField(model,"receita");
 		receita.setLabel(gt("Receita"));
 		receita.propertie().add("name","p_receita").add("type","text").add("maxlength","30").add("showLabel","true").add("group_in","");
+		
+		ativo = new CheckBoxField(model,"ativo");
+		ativo.setLabel(gt("Ativo"));
+		ativo.propertie().add("remote-Combo",Core.getIGRPLink("net_farma_app","Paginalistarproduto","Combo")).add("name","p_ativo").add("type","checkbox").add("maxlength","30").add("showLabel","true").add("group_in","").add("java-type","int").add("switch","true").add("check","true").add("desc","true");
+		
+		ativo_check = new CheckBoxField(model,"ativo_check");
+		ativo_check.propertie().add("name","p_ativo").add("type","checkbox").add("maxlength","30").add("showLabel","true").add("group_in","").add("java-type","int").add("switch","true").add("check","true").add("desc","true");
 		
 		id_list = new HiddenField(model,"id_list");
 		id_list.setLabel(gt(""));
@@ -142,6 +152,8 @@ public class PaginalistarprodutoView extends View {
 		tabela_de_produto.addField(preco);
 		tabela_de_produto.addField(tipo_de_produto);
 		tabela_de_produto.addField(receita);
+		tabela_de_produto.addField(ativo);
+		tabela_de_produto.addField(ativo_check);
 		tabela_de_produto.addField(id_list);
 
 		toolsbar_1.addButton(btn_registrar_produtos);
@@ -169,6 +181,7 @@ public class PaginalistarprodutoView extends View {
 		preco.setValue(model);
 		tipo_de_produto.setValue(model);
 		receita.setValue(model);
+		ativo.setValue(model);
 		id_list.setValue(model);	
 
 		tabela_de_produto.loadModel(((Paginalistarproduto) model).getTabela_de_produto());

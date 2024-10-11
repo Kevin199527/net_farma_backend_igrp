@@ -74,6 +74,8 @@ private Pair receita;
 private Pair estoque;
 		@PairNotNull()
 private Pair tipo_de_produto;
+private Pair ativo;
+		private Pair ativo_check;
 		public void setSeparatorlist_registrar_id(Pair separatorlist_registrar_id){
 			this.separatorlist_registrar_id = separatorlist_registrar_id;
 		}
@@ -183,6 +185,34 @@ private Pair tipo_de_produto;
 
 		public Pair getTipo_de_produto(){
 			return this.tipo_de_produto;
+		}
+
+		public void setAtivo(Pair ativo){
+			this.ativo = ativo;
+		}
+		public void setAtivo(String key){
+			this.setAtivo(key, key);
+		}
+		public void setAtivo(String key, String value){
+			this.ativo= new Pair(key, value);
+		}
+
+		public Pair getAtivo(){
+			return this.ativo;
+		}
+		
+		public void setAtivo_check(Pair ativo_check){
+			this.ativo_check = ativo_check;
+		}
+		public void setAtivo_check(String key){
+			this.setAtivo_check(key, key);
+		}
+		public void setAtivo_check(String key, String value){
+			this.ativo_check= new Pair(key, value);
+		}
+
+		public Pair getAtivo_check(){
+			return this.ativo_check;
 		}
 
 	}

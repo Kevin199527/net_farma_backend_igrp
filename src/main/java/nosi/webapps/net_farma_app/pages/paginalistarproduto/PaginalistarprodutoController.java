@@ -7,10 +7,7 @@ import nosi.core.webapp.Response;//
 /* Start-Code-Block (import) */
 /* End-Code-Block */
 /*----#start-code(packages_import)----*/
-import nosi.webapps.net_farma_app.dao.TblMedicamentos;
 import nosi.webapps.net_farma_app.helper.Listar_ProdutoHelper;
-import java.util.ArrayList;
-import java.util.List;
 /*----#end-code----*/
 		
 public class PaginalistarprodutoController extends Controller {
@@ -18,12 +15,14 @@ public class PaginalistarprodutoController extends Controller {
 		var model = new Paginalistarproduto();
 		model.load();
 		var view = new PaginalistarprodutoView();
+		view.ativo.setParam(true);
 		view.id_list.setParam(true);
+		view.tipo_de_produto_filtro.loadDomain("Tipo de Produto","net_farma_app","-- Selecionar --");
 		view.receita_filter.loadDomain("Receita","net_farma_app","-- Selecionar --");
 		/*----#gen-example
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
-		model.loadTabela_de_produto(Core.query(null,"SELECT '../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg' as imagem,'Totam officia magna totam anim' as nome_do_produto,'Rem magna aperiam laudantium ut elit natus officia natus anim voluptatem sit dolor amet dolor' as descricao,'Sit accusantium natus amet des' as preco,'Voluptatem natus lorem consect' as tipo_de_produto,'Adipiscing sit labore aliqua u' as receita,'hidden-8d5e_0269' as id_list "));
+		model.loadTabela_de_produto(Core.query(null,"SELECT '../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg' as imagem,'Perspiciatis totam omnis rem a' as nome_do_produto,'Consectetur ut aperiam officia unde deserunt aliqua accusantium sit lorem ut lorem voluptatem stract consectetur' as descricao,'Ut accusantium omnis deserunt' as preco,'Sit laudantium adipiscing aper' as tipo_de_produto,'Deserunt mollit sit labore off' as receita,'1' as ativo,'hidden-50b9_4ae4' as id_list "));
 		  ----#gen-example */
 		/* Start-Code-Block (index) *//* End-Code-Block (index) */
 		/*----#start-code(index)----*/
@@ -40,6 +39,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Registrar_medicamento","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -59,6 +59,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -78,6 +79,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_dashboard","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -97,6 +99,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -115,6 +118,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -134,6 +138,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
@@ -154,6 +159,7 @@ public class PaginalistarprodutoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
+		  this.addQueryString("p_ativo",Core.getParam("p_ativo"));
 		  this.addQueryString("p_id_list",Core.getParam("p_id_list"));
 		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model

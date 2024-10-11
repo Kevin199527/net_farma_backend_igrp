@@ -50,7 +50,12 @@ public class PageDashboardHelper extends IgrpPageHelper<Pagina_dashboard, Pagina
     }
 
     public void dadosTables(){
-        List<Vendas> dadosVenda = new Vendas().all();
+        List<Vendas> dadosVenda = new Vendas().find()
+                .andWhere("produto", "LIKE", Core.isNotNull(model.getNome_do_produto()) ? "%" + model.getNome_do_produto() + "%" : null)
+                .andWhere("metodoPagamento", "LIKE", Core.isNotNull(model.getMetodo_de_pagamento_filter()) ? "%" + model.getMetodo_de_pagamento_filter() + "%" : null)
+                .andWhere("status", "=", Core.isNotNull(model.getStatus_1()) ? model.getStatus_1() : null)
+                .andWhere("tipoProduto", "=", Core.isNotNull(model.getTipo_de_produto_filtro()) ? model.getTipo_de_produto_filtro() : null)
+                .all();
 
         if (dadosVenda != null) {
             List<Pagina_dashboard.Table_dados_de_venda> tabelaDadosVenda = new ArrayList<Pagina_dashboard.Table_dados_de_venda>();

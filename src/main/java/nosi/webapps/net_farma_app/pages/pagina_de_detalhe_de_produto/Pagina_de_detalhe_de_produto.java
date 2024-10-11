@@ -25,6 +25,11 @@ public class Pagina_de_detalhe_de_produto extends Model{
 	@RParam(rParamName = "p_contem_receita")
 	private String contem_receita;
 
+	@RParam(rParamName = "p_ativo")
+	private int ativo;
+	@RParam(rParamName = "p_ativo_check")
+	private int ativo_check;
+
 	@RParam(rParamName = "p_descricao_do_produto")
 	private String descricao_do_produto;
 
@@ -77,6 +82,19 @@ public class Pagina_de_detalhe_de_produto extends Model{
 	}
 	public String getContem_receita(){
 		return this.contem_receita;
+	}
+	
+	public void setAtivo(int ativo){
+		this.ativo = ativo;
+	}
+	public int getAtivo(){
+		return this.ativo;
+	}
+	public void setAtivo_check(int ativo_check){
+		this.ativo_check = ativo_check;
+	}
+	public int getAtivo_check(){
+		return this.ativo_check;
 	}
 	
 	public void setDescricao_do_produto(String descricao_do_produto){

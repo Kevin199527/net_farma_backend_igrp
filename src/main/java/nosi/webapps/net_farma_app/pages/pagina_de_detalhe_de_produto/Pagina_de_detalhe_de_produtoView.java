@@ -14,6 +14,8 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 	public Field preco_do_produto;
 	public Field tipo_de_produto;
 	public Field contem_receita;
+	public Field ativo;
+	public Field ativo_check;
 	public Field descricao_do_produto;
 	public Field id_list;
 	public IGRPSectionHeader sectionheader_1;
@@ -56,6 +58,10 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		contem_receita.setLabel(gt("Contem Receita"));
 		contem_receita.propertie().add("name","p_contem_receita").add("type","text").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("Contem Receita")).add("desclabel","false").add("inputmask","").add("tooltip","false").add("disable_copy_paste","false");
 		
+		ativo = new CheckBoxField(model,"ativo");
+		ativo.setLabel(gt("Ativo"));
+		ativo.propertie().add("name","p_ativo").add("type","checkbox").add("maxlength","250").add("required","false").add("readonly","false").add("disabled","false").add("java-type","int").add("tooltip","false").add("disable_copy_paste","false").add("switch","true").add("check","true");
+		
 		descricao_do_produto = new TextAreaField(model,"descricao_do_produto");
 		descricao_do_produto.setLabel(gt("Descrição do Produto"));
 		descricao_do_produto.propertie().add("name","p_descricao_do_produto").add("type","textarea").add("maxlength","2500000").add("required","false").add("readonly","false").add("disabled","false").add("disablehtml","true").add("placeholder",gt("")).add("desclabel","false").add("tooltip","false").add("disable_copy_paste","false");
@@ -85,6 +91,7 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		form_1.addField(preco_do_produto);
 		form_1.addField(tipo_de_produto);
 		form_1.addField(contem_receita);
+		form_1.addField(ativo);
 		form_1.addField(descricao_do_produto);
 		form_1.addField(id_list);
 
@@ -101,6 +108,7 @@ public class Pagina_de_detalhe_de_produtoView extends View {
 		preco_do_produto.setValue(model);
 		tipo_de_produto.setValue(model);
 		contem_receita.setValue(model);
+		ativo.setValue(model);
 		descricao_do_produto.setValue(model);
 		id_list.setValue(model);	
 

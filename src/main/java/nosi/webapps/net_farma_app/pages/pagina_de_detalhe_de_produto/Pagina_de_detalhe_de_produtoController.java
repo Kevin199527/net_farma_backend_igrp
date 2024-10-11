@@ -30,14 +30,14 @@ public class Pagina_de_detalhe_de_produtoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
-		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
+		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (concluir)  *//* End-Code-Block  */
 		/*----#start-code(concluir)----*/
 		Pagina_DetalheHelper.with(Core.getSession(), model).editarDados();
 		/*----#end-code----*/
-		return this.redirect("net_farma_app","Paginalistarproduto","index", this.queryString());	
+		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
 	}
 	
 	public Response actionFechar_1() throws IOException, IllegalArgumentException, IllegalAccessException{
@@ -47,14 +47,14 @@ public class Pagina_de_detalhe_de_produtoController extends Controller {
 		  EXAMPLES COPY/PASTE:
 		  INFO: Core.query(null,... change 'null' to your db connection name, added in Application Builder.
 		  this.addQueryString("p_id","12"); //to send a query string in the URL
-		  return this.forward("net_farma_app","Pagina_de_detalhe_de_produto","index",this.queryString()); //if submit, loads the values
+		  return this.forward("net_farma_app","Paginalistarproduto","index",this.queryString()); //if submit, loads the values
 		  Use model.validate() to validate your model
 		  ----#gen-example */
 		/* Start-Code-Block (fechar_1)  *//* End-Code-Block  */
 		/*----#start-code(fechar_1)----*/
 
 		/*----#end-code----*/
-		return this.redirect("net_farma_app","Pagina_de_detalhe_de_produto","index", this.queryString());	
+		return this.redirect("net_farma_app","Paginalistarproduto","index", this.queryString());	
 	}
 	/* Start-Code-Block (custom-actions)  *//* End-Code-Block  */
 /*----#start-code(custom_actions)----*/

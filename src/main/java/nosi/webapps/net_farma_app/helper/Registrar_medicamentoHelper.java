@@ -42,6 +42,7 @@ public static Registrar_medicamentoHelper with(Session session, Registrar_medica
                         entityMedicamentos.setReceita(row.getReceita().getKey());
                         entityMedicamentos.setEstoques(Core.toInt(row.getEstoque().getKey()));
                         entityMedicamentos.setTipoDeProduto(row.getTipo_de_produto().getKey());
+                        entityMedicamentos.setAtivo(row.getAtivo().getKey());
                         entityMedicamentos.setImagemUrl(row.getImage().getKey());
 
                         session.persist(entityMedicamentos);

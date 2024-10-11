@@ -77,6 +77,8 @@ public class Paginalistarproduto extends Model{
 		private String preco;
 		private String tipo_de_produto;
 		private String receita;
+		private int ativo;
+		private int ativo_check;
 		private String id_list;
 		public void setImagem(String imagem){
 			this.imagem = imagem;
@@ -124,6 +126,19 @@ public class Paginalistarproduto extends Model{
 		}
 		public String getReceita(){
 			return this.receita;
+		}
+
+		public void setAtivo(int ativo){
+			this.ativo = ativo;
+		}
+		public int getAtivo(){
+			return this.ativo;
+		}
+		public void setAtivo_check(int ativo_check){
+			this.ativo_check = ativo_check;
+		}
+		public int getAtivo_check(){
+			return this.ativo_check;
 		}
 
 		public void setId_list(String id_list){

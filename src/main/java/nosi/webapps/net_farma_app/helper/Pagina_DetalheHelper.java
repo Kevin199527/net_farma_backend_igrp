@@ -48,6 +48,7 @@ public class Pagina_DetalheHelper extends IgrpPageHelper<Pagina_de_detalhe_de_pr
                 model.setTipo_de_produto(t.getTipoDeProduto());
                 model.setContem_receita(t.getReceita());
                 model.setDescricao_do_produto(t.getDescricao());
+                model.setAtivo(Core.toInt(t.getAtivo()));
 
                 t.update().where("id = " + Core.getParam("p_id_list"));
             }
@@ -66,6 +67,7 @@ public class Pagina_DetalheHelper extends IgrpPageHelper<Pagina_de_detalhe_de_pr
                     t.setTipoDeProduto(model.getTipo_de_produto());
                     t.setReceita(model.getContem_receita());
                     t.setDescricao(model.getDescricao_do_produto());
+                    t.setAtivo(""+model.getAtivo());
 
                     t.update().where("id = " + Core.getParam("p_id_list"));
                 }

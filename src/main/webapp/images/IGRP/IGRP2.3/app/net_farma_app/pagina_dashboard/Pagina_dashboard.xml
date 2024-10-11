@@ -260,31 +260,31 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>84</col>
-                    <col>914</col>
-                    <col>625</col>
-                    <col>177</col>
+                    <col>928</col>
+                    <col>312</col>
+                    <col>456</col>
+                    <col>491</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>785</col>
-                    <col>980</col>
-                    <col>763</col>
-                    <col>576</col>
+                    <col>236</col>
+                    <col>549</col>
+                    <col>962</col>
+                    <col>367</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>223</col>
-                    <col>143</col>
-                    <col>78</col>
+                    <col>309</col>
+                    <col>428</col>
+                    <col>218</col>
                 </row>
             </value>
             <colors>
-                <col>#e17552</col>
-                <col>#8b2ef4</col>
-                <col>#6940c0</col>
-                <col>#b146a3</col>
+                <col>#1d05d4</col>
+                <col>#bb89e1</col>
+                <col>#b41ec7</col>
+                <col>#7a68f9</col>
             </colors>
         </chart_3>
         <chart_2 type="chart" xml-type="chart" title="Quantidade de Produtos Entregues por Fornecedor" gen-type="container" gen-group="">
@@ -303,31 +303,31 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>697</col>
-                    <col>377</col>
-                    <col>74</col>
-                    <col>146</col>
+                    <col>832</col>
+                    <col>805</col>
+                    <col>876</col>
+                    <col>424</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>347</col>
-                    <col>605</col>
-                    <col>583</col>
-                    <col>405</col>
+                    <col>33</col>
+                    <col>158</col>
+                    <col>979</col>
+                    <col>136</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>449</col>
-                    <col>911</col>
-                    <col>792</col>
+                    <col>360</col>
+                    <col>876</col>
+                    <col>332</col>
                 </row>
             </value>
             <colors>
-                <col>#209fac</col>
-                <col>#5dac52</col>
-                <col>#983620</col>
-                <col>#6007da</col>
+                <col>#e0d933</col>
+                <col>#4dae2e</col>
+                <col>#8826ba</col>
+                <col>#b39ab0</col>
             </colors>
         </chart_2>
         <chart_1 type="chart" xml-type="chart" title="Estoque do Produtos" gen-type="container" gen-group="">
@@ -346,38 +346,38 @@
             <value>
                 <row>
                     <col>2010</col>
-                    <col>972</col>
-                    <col>339</col>
-                    <col>848</col>
-                    <col>495</col>
+                    <col>91</col>
+                    <col>984</col>
+                    <col>58</col>
+                    <col>798</col>
                 </row>
                 <row>
                     <col>2009</col>
-                    <col>502</col>
-                    <col>248</col>
-                    <col>43</col>
-                    <col>893</col>
+                    <col>641</col>
+                    <col>310</col>
+                    <col>926</col>
+                    <col>497</col>
                 </row>
                 <row>
                     <col>2015</col>
                     <col>1010</col>
-                    <col>829</col>
-                    <col>563</col>
-                    <col>485</col>
+                    <col>830</col>
+                    <col>730</col>
+                    <col>218</col>
                 </row>
             </value>
             <colors>
-                <col>#d15e60</col>
-                <col>#286451</col>
-                <col>#f99334</col>
-                <col>#eee72a</col>
+                <col>#64f930</col>
+                <col>#37524e</col>
+                <col>#2ac2a7</col>
+                <col>#87b26d</col>
             </colors>
         </chart_1>
         <form_filtro type="form" xml-type="form" title="Filtro" gen-type="container" gen-group="">
             <fields>
                 <nome_do_produto name="p_nome_do_produto" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Nome do Produto</label>
-                    <value>Accusantium anim deserunt laudantium dolor</value>
+                    <value>Lorem ut lorem officia aperiam</value>
                 </nome_do_produto>
                 <status_1 name="p_status_1" type="select" multiple="false" tags="false" load_service_data="false" domain="Status « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
                     <label>Status</label>
@@ -397,14 +397,36 @@
                         </option>
                     </list>
                 </status_1>
-                <data_de name="p_data_de" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="success">
-                    <label>Data de:</label>
-                    <value>08-03-2014</value>
-                </data_de>
-                <data_ate name="p_data_ate" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="danger">
-                    <label>Data ate:</label>
-                    <value>04-08-2014</value>
-                </data_ate>
+                <tipo_de_produto_filtro name="p_tipo_de_produto_filtro" type="select" multiple="false" tags="false" load_service_data="false" domain="Tipo de Produto « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Tipo de Produto</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Medicamento</text>
+                            <value>Medicamento</value>
+                        </option>
+                        <option>
+                            <text>Produto de Bebe</text>
+                            <value>Produto de Bebe</value>
+                        </option>
+                        <option>
+                            <text>Produto para Mãe</text>
+                            <value>Produto para Mãe</value>
+                        </option>
+                        <option>
+                            <text>Suplimentos</text>
+                            <value>Suplimentos</value>
+                        </option>
+                        <option>
+                            <text>Outros</text>
+                            <value>Outros</value>
+                        </option>
+                    </list>
+                </tipo_de_produto_filtro>
+                <metodo_de_pagamento_filter name="p_metodo_de_pagamento_filter" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Metodo de Pagamento</label>
+                    <value>Deserunt voluptatem omnis magna elit</value>
+                </metodo_de_pagamento_filter>
             </fields>
             <tools-bar>
                 <item id="button_3acb_1fef" type="form" code="" class="success" rel="pesquisar" custom_return="true" refresh_components="table_dados_de_venda">
@@ -452,74 +474,74 @@
             <table>
                 <value>
                     <row>
-                        <estado name="p_estado">cancelada</estado>
-                        <nome_de_produto name="p_nome_de_produto">Sed lorem magna totam anim</nome_de_produto>
-                        <nome_de_produto_1 name="p_nome_de_produto_1">Aliqua sed doloremque sit elit</nome_de_produto_1>
-                        <tipo_de_produto name="p_tipo_de_produto">Lorem voluptatem sit sit offic</tipo_de_produto>
-                        <quantidade name="p_quantidade">Deserunt ut deserunt magna off</quantidade>
-                        <preco_unitario name="p_preco_unitario">Dolor sit perspiciatis dolorem</preco_unitario>
-                        <data_de_venda name="p_data_de_venda">Omnis mollit consectetur elit</data_de_venda>
-                        <metodo_de_pagamento name="p_metodo_de_pagamento">Lorem ipsum officia voluptatem</metodo_de_pagamento>
-                        <valor_total_pago name="p_valor_total_pago">Aperiam rem laudantium ipsum u</valor_total_pago>
+                        <estado name="p_estado">pendente</estado>
+                        <nome_de_produto name="p_nome_de_produto">Stract laudantium amet sed off</nome_de_produto>
+                        <nome_de_produto_1 name="p_nome_de_produto_1">Stract anim deserunt sit accus</nome_de_produto_1>
+                        <tipo_de_produto name="p_tipo_de_produto">Doloremque totam iste consecte</tipo_de_produto>
+                        <quantidade name="p_quantidade">Lorem labore officia elit iste</quantidade>
+                        <preco_unitario name="p_preco_unitario">Anim doloremque aliqua adipisc</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Deserunt ipsum amet anim lauda</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Elit deserunt ut accusantium a</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Officia lorem voluptatem sed s</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">concluída</estado>
+                        <nome_de_produto name="p_nome_de_produto">Rem lorem accusantium sit pers</nome_de_produto>
+                        <nome_de_produto_1 name="p_nome_de_produto_1">Aperiam perspiciatis rem molli</nome_de_produto_1>
+                        <tipo_de_produto name="p_tipo_de_produto">Laudantium sit sed lorem rem</tipo_de_produto>
+                        <quantidade name="p_quantidade">Labore accusantium adipiscing</quantidade>
+                        <preco_unitario name="p_preco_unitario">Omnis dolor lorem elit natus</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Mollit dolor natus aliqua omni</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Elit omnis natus ipsum natus</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Aperiam deserunt ut sed mollit</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">concluída</estado>
+                        <nome_de_produto name="p_nome_de_produto">Mollit perspiciatis ut sit adi</nome_de_produto>
+                        <nome_de_produto_1 name="p_nome_de_produto_1">Ipsum omnis dolor magna sit</nome_de_produto_1>
+                        <tipo_de_produto name="p_tipo_de_produto">Omnis natus labore perspiciati</tipo_de_produto>
+                        <quantidade name="p_quantidade">Magna laudantium sit dolor nat</quantidade>
+                        <preco_unitario name="p_preco_unitario">Deserunt lorem sed perspiciati</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Aperiam omnis ipsum anim volup</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Voluptatem aliqua aperiam stra</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Voluptatem doloremque dolor ad</valor_total_pago>
+                    </row>
+                    <row>
+                        <estado name="p_estado">pendente</estado>
+                        <nome_de_produto name="p_nome_de_produto">Laudantium stract ut adipiscin</nome_de_produto>
+                        <nome_de_produto_1 name="p_nome_de_produto_1">Totam accusantium aperiam rem</nome_de_produto_1>
+                        <tipo_de_produto name="p_tipo_de_produto">Amet adipiscing voluptatem ist</tipo_de_produto>
+                        <quantidade name="p_quantidade">Consectetur accusantium unde i</quantidade>
+                        <preco_unitario name="p_preco_unitario">Dolor ipsum aliqua anim deseru</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Amet ipsum mollit stract dolor</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Officia mollit voluptatem amet</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Consectetur aliqua dolor rem d</valor_total_pago>
                     </row>
                     <row>
                         <estado name="p_estado">cancelada</estado>
-                        <nome_de_produto name="p_nome_de_produto">Rem aperiam perspiciatis volup</nome_de_produto>
-                        <nome_de_produto_1 name="p_nome_de_produto_1">Mollit adipiscing ut amet pers</nome_de_produto_1>
-                        <tipo_de_produto name="p_tipo_de_produto">Ut accusantium laudantium natu</tipo_de_produto>
-                        <quantidade name="p_quantidade">Mollit natus stract sed lorem</quantidade>
-                        <preco_unitario name="p_preco_unitario">Natus unde doloremque omnis si</preco_unitario>
-                        <data_de_venda name="p_data_de_venda">Voluptatem perspiciatis unde s</data_de_venda>
-                        <metodo_de_pagamento name="p_metodo_de_pagamento">Anim magna lorem voluptatem de</metodo_de_pagamento>
-                        <valor_total_pago name="p_valor_total_pago">Aperiam magna elit sit stract</valor_total_pago>
-                    </row>
-                    <row>
-                        <estado name="p_estado">cancelada</estado>
-                        <nome_de_produto name="p_nome_de_produto">Totam amet doloremque consecte</nome_de_produto>
-                        <nome_de_produto_1 name="p_nome_de_produto_1">Aperiam rem officia sed anim</nome_de_produto_1>
-                        <tipo_de_produto name="p_tipo_de_produto">Aliqua sit lorem aliqua rem</tipo_de_produto>
-                        <quantidade name="p_quantidade">Sed officia voluptatem aperiam</quantidade>
-                        <preco_unitario name="p_preco_unitario">Adipiscing rem iste aperiam om</preco_unitario>
-                        <data_de_venda name="p_data_de_venda">Adipiscing consectetur stract</data_de_venda>
-                        <metodo_de_pagamento name="p_metodo_de_pagamento">Ut perspiciatis amet rem anim</metodo_de_pagamento>
-                        <valor_total_pago name="p_valor_total_pago">Sit elit natus laudantium sit</valor_total_pago>
-                    </row>
-                    <row>
-                        <estado name="p_estado">cancelada</estado>
-                        <nome_de_produto name="p_nome_de_produto">Stract dolor laudantium elit l</nome_de_produto>
-                        <nome_de_produto_1 name="p_nome_de_produto_1">Adipiscing sit officia iste om</nome_de_produto_1>
-                        <tipo_de_produto name="p_tipo_de_produto">Elit consectetur ut sit natus</tipo_de_produto>
-                        <quantidade name="p_quantidade">Deserunt unde amet adipiscing</quantidade>
-                        <preco_unitario name="p_preco_unitario">Adipiscing accusantium dolor s</preco_unitario>
-                        <data_de_venda name="p_data_de_venda">Officia deserunt iste doloremq</data_de_venda>
-                        <metodo_de_pagamento name="p_metodo_de_pagamento">Stract dolor aperiam unde dese</metodo_de_pagamento>
-                        <valor_total_pago name="p_valor_total_pago">Officia laudantium perspiciati</valor_total_pago>
-                    </row>
-                    <row>
-                        <estado name="p_estado">cancelada</estado>
-                        <nome_de_produto name="p_nome_de_produto">Anim rem unde ut sit</nome_de_produto>
-                        <nome_de_produto_1 name="p_nome_de_produto_1">Mollit aperiam omnis sed totam</nome_de_produto_1>
-                        <tipo_de_produto name="p_tipo_de_produto">Iste unde doloremque accusanti</tipo_de_produto>
-                        <quantidade name="p_quantidade">Deserunt mollit omnis sit elit</quantidade>
-                        <preco_unitario name="p_preco_unitario">Lorem adipiscing amet rem aliq</preco_unitario>
-                        <data_de_venda name="p_data_de_venda">Labore officia sed natus sit</data_de_venda>
-                        <metodo_de_pagamento name="p_metodo_de_pagamento">Aliqua perspiciatis sit anim l</metodo_de_pagamento>
-                        <valor_total_pago name="p_valor_total_pago">Iste consectetur aperiam volup</valor_total_pago>
+                        <nome_de_produto name="p_nome_de_produto">Sed rem sit sed labore</nome_de_produto>
+                        <nome_de_produto_1 name="p_nome_de_produto_1">Deserunt sed natus unde offici</nome_de_produto_1>
+                        <tipo_de_produto name="p_tipo_de_produto">Rem iste stract mollit amet</tipo_de_produto>
+                        <quantidade name="p_quantidade">Mollit amet consectetur aliqua</quantidade>
+                        <preco_unitario name="p_preco_unitario">Voluptatem ipsum elit perspici</preco_unitario>
+                        <data_de_venda name="p_data_de_venda">Mollit sit sit magna officia</data_de_venda>
+                        <metodo_de_pagamento name="p_metodo_de_pagamento">Stract perspiciatis elit aperi</metodo_de_pagamento>
+                        <valor_total_pago name="p_valor_total_pago">Ut aliqua adipiscing natus mol</valor_total_pago>
                     </row>
                 </value>
                 <legend_color>
                     <item>
-                        <label>cancelado</label>
+                        <label>Cancelado</label>
                         <value>cancelada</value>
                         <color>#dc2b4c</color>
                     </item>
                     <item>
-                        <label>pendente</label>
+                        <label>Pendente</label>
                         <value>pendente</value>
                         <color>#ea9126</color>
                     </item>
                     <item>
-                        <label>concluida</label>
+                        <label>Concluida</label>
                         <value>concluída</value>
                         <color>#95c11f</color>
                     </item>

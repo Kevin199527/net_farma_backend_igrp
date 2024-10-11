@@ -70,7 +70,7 @@
             <fields>
                 <sectionheader_2_text type="text" name="p_sectionheader_2_text" persist="true" maxlength="4000">
                     <value>
-                        <![CDATA[<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Filtrar Produtos</span></strong></span></p>
+                        <![CDATA[<p><strong><span style='font-size:36px;'>Filtrar Produtos</span></strong></p>
 ]]>
                     </value>
                 </sectionheader_2_text>
@@ -80,11 +80,33 @@
             <fields>
                 <nome_filter name="p_nome_filter" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="Filtre por Nome do Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
                     <label>Nome</label>
-                    <value>Deserunt doloremque lorem sed magna</value>
+                    <value>Adipiscing voluptatem labore officia unde</value>
                 </nome_filter>
-                <tipo_de_produto_filtro name="p_tipo_de_produto_filtro" type="text" maxlength="250" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="Filtre por Tipo de Produto" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                <tipo_de_produto_filtro name="p_tipo_de_produto_filtro" type="select" multiple="false" tags="false" load_service_data="false" domain="Tipo de Produto « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
                     <label>Tipo de Produto</label>
-                    <value>Aperiam amet consectetur natus anim</value>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Medicamento</text>
+                            <value>Medicamento</value>
+                        </option>
+                        <option>
+                            <text>Produto de Bebe</text>
+                            <value>Produto de Bebe</value>
+                        </option>
+                        <option>
+                            <text>Produto para Mãe</text>
+                            <value>Produto para Mãe</value>
+                        </option>
+                        <option>
+                            <text>Suplimentos</text>
+                            <value>Suplimentos</value>
+                        </option>
+                        <option>
+                            <text>Outros</text>
+                            <value>Outros</value>
+                        </option>
+                    </list>
                 </tipo_de_produto_filtro>
                 <receita_filter name="p_receita_filter" type="select" multiple="false" tags="false" load_service_data="false" domain="Receita « net_farma_app" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
                     <label>Receita</label>
@@ -118,7 +140,7 @@
             <fields>
                 <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
                     <value>
-                        <![CDATA[<p><span style='font-family:Times New Roman,Times,serif;'><strong><span style='font-size:36px;'>Lista de Produto</span></strong></span></p>
+                        <![CDATA[<p><strong><span style='font-size:36px;'>Lista de Produto</span></strong></p>
 ]]>
                     </value>
                 </sectionheader_1_text>
@@ -144,6 +166,17 @@
                 <receita name="p_receita" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
                     <label>Receita</label>
                 </receita>
+                <ativo name="p_ativo" type="checkbox" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="true" group_in="" java-type="int" switch="true" check="true" desc="true">
+                    <label>Ativo</label>
+                    <rules>
+                        <rule type="remote_combobox">
+                            <proc>Combo</proc>
+                            <requestFields>
+                                <item>p_ativo</item>
+                            </requestFields>
+                        </rule>
+                    </rules>
+                </ativo>
                 <id_list name="p_id_list" type="hidden" maxlength="30" showLabel="true" iskey="true" group_in="" java-type="" tag="id_list"/>
             </fields>
             <table>
@@ -154,12 +187,14 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Perspiciatis deserunt consecte</nome_do_produto>
-                        <descricao name="p_descricao">Accusantium officia laudantium adipiscing sit unde rem officia laudantium totam aliqua stract lorem amet mollit</descricao>
-                        <preco name="p_preco">Deserunt amet laudantium magna</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Officia sit elit doloremque pe</tipo_de_produto>
-                        <receita name="p_receita">Iste consectetur omnis elit ad</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-6edb_17be</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Voluptatem aperiam elit dolore</nome_do_produto>
+                        <descricao name="p_descricao">Omnis natus totam deserunt adipiscing unde officia anim sit aperiam magna ipsum mollit iste sit</descricao>
+                        <preco name="p_preco">Ipsum labore ut laudantium con</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Perspiciatis totam omnis iste</tipo_de_produto>
+                        <receita name="p_receita">Doloremque elit aperiam adipis</receita>
+                        <ativo name="p_ativo" check="true" desc="true">1</ativo>
+                        <ativo_check name="p_ativo_check">1</ativo_check>
+                        <id_list name="p_id_list" tag="id_list">hidden-ddfd_e9dc</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -167,12 +202,14 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Doloremque stract officia unde</nome_do_produto>
-                        <descricao name="p_descricao">Voluptatem deserunt aliqua laudantium rem consectetur sit mollit totam adipiscing magna sit anim rem stract</descricao>
-                        <preco name="p_preco">Aliqua elit mollit sit totam</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Perspiciatis adipiscing natus</tipo_de_produto>
-                        <receita name="p_receita">Iste officia sed labore iste</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-8157_9f31</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Dolor accusantium sed magna ad</nome_do_produto>
+                        <descricao name="p_descricao">Anim rem doloremque rem labore aliqua totam iste mollit ut dolor natus totam adipiscing elit</descricao>
+                        <preco name="p_preco">Anim dolor sit ipsum lorem</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Omnis iste unde consectetur do</tipo_de_produto>
+                        <receita name="p_receita">Doloremque laudantium accusant</receita>
+                        <ativo name="p_ativo" check="true" desc="true">1</ativo>
+                        <ativo_check name="p_ativo_check">1</ativo_check>
+                        <id_list name="p_id_list" tag="id_list">hidden-f6bc_b294</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -180,12 +217,14 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Consectetur anim aliqua aperia</nome_do_produto>
-                        <descricao name="p_descricao">Perspiciatis totam lorem omnis amet iste deserunt doloremque accusantium perspiciatis dolor voluptatem dolor doloremque perspiciatis</descricao>
-                        <preco name="p_preco">Labore perspiciatis iste dolor</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Accusantium magna iste magna u</tipo_de_produto>
-                        <receita name="p_receita">Dolor sit deserunt lorem anim</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-f06c_a74e</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Officia natus perspiciatis mag</nome_do_produto>
+                        <descricao name="p_descricao">Dolor totam natus stract officia totam voluptatem aliqua deserunt laudantium amet aliqua perspiciatis iste ipsum</descricao>
+                        <preco name="p_preco">Dolor perspiciatis aliqua aper</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Aliqua anim officia omnis dese</tipo_de_produto>
+                        <receita name="p_receita">Labore magna unde elit rem</receita>
+                        <ativo name="p_ativo" check="true" desc="true">1</ativo>
+                        <ativo_check name="p_ativo_check">1</ativo_check>
+                        <id_list name="p_id_list" tag="id_list">hidden-9dc1_f196</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -193,12 +232,14 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Aliqua natus voluptatem deseru</nome_do_produto>
-                        <descricao name="p_descricao">Totam stract rem deserunt doloremque aliqua magna sed natus ut anim aperiam dolor anim rem</descricao>
-                        <preco name="p_preco">Totam rem sit mollit anim</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Ipsum aperiam amet elit sit</tipo_de_produto>
-                        <receita name="p_receita">Accusantium deserunt stract na</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-cdbe_38f9</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Lorem anim magna aperiam natus</nome_do_produto>
+                        <descricao name="p_descricao">Iste lorem officia doloremque lorem elit ipsum voluptatem dolor accusantium rem adipiscing officia sit officia</descricao>
+                        <preco name="p_preco">Ipsum omnis sit ipsum rem</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Deserunt laudantium accusantiu</tipo_de_produto>
+                        <receita name="p_receita">Consectetur labore anim rem om</receita>
+                        <ativo name="p_ativo" check="true" desc="true">1</ativo>
+                        <ativo_check name="p_ativo_check">1</ativo_check>
+                        <id_list name="p_id_list" tag="id_list">hidden-0aaa_70f7</id_list>
                     </row>
                     <row>
                         <context-menu>
@@ -206,12 +247,14 @@
                             <param>p2=linha1</param>
                         </context-menu>
                         <imagem name="p_imagem">../images/IGRP/IGRP2.3/assets/img/jon_doe.jpg</imagem>
-                        <nome_do_produto name="p_nome_do_produto">Aliqua elit mollit anim aliqua</nome_do_produto>
-                        <descricao name="p_descricao">Labore aperiam lorem doloremque sit adipiscing omnis elit natus aliqua natus anim officia perspiciatis natus</descricao>
-                        <preco name="p_preco">Sed iste sed voluptatem omnis</preco>
-                        <tipo_de_produto name="p_tipo_de_produto">Doloremque amet totam iste dol</tipo_de_produto>
-                        <receita name="p_receita">Accusantium dolor adipiscing d</receita>
-                        <id_list name="p_id_list" tag="id_list">hidden-7f4c_71d8</id_list>
+                        <nome_do_produto name="p_nome_do_produto">Doloremque sit adipiscing accu</nome_do_produto>
+                        <descricao name="p_descricao">Aperiam sit labore sed aperiam natus dolor anim natus omnis ut elit rem adipiscing sit</descricao>
+                        <preco name="p_preco">Officia ut aperiam sed officia</preco>
+                        <tipo_de_produto name="p_tipo_de_produto">Stract amet rem labore iste</tipo_de_produto>
+                        <receita name="p_receita">Iste mollit labore magna strac</receita>
+                        <ativo name="p_ativo" check="true" desc="true">1</ativo>
+                        <ativo_check name="p_ativo_check">1</ativo_check>
+                        <id_list name="p_id_list" tag="id_list">hidden-03f6_dd23</id_list>
                     </row>
                 </value>
                 <context-menu>
